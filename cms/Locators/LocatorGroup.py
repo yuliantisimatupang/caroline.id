@@ -1,0 +1,12 @@
+#Modul Group
+modul_group= "xpath://span[normalize-space()='Group']"
+input_kode_group=  "xpath://div[@blocker-target='cancel-add-modal']//div//div//div//input[@placeholder='Ketik Kode Group']"
+input_nama_group=  "xpath://div[@id='add-form-modal']//input[contains(@placeholder,'Ketik Nama Group')]"
+button_tambah="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//div//div//div//button[@target='customer-search']"
+input_cari_customer="xpath://input[contains(@placeholder,'Cari customer disini')]"
+checkbox1="xpath://body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]"
+checkbox2="xpath://body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/input[1]"
+button_tambahkan="xpath://button[normalize-space()='Tambahkan']"
+aksi_group=  "xpath://div[@class='dropdown-button flex justify-center items-center px-2.5']//*[name()='svg']"
+button_view="xpath://tbody/tr[1]/td[6]/div[1]/button[1]//*[name()='svg']"
+button_kembali="xpath://button[normalize-space()='Kembali']"

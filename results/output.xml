@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240102 13:59:47.347" rpa="false" schemaversion="4">
+<suite id="s1" name="JBA" source="C:\JBA">
+<suite id="s1-s1" name="Cms" source="C:\JBA\cms">
+<suite id="s1-s1-s1" name="Test" source="C:\JBA\cms\Test">
+<suite id="s1-s1-s1-s1" name="Model Tipe" source="C:\JBA\cms\Test\Model Tipe">
+<suite id="s1-s1-s1-s1-s1" name="ModulType" source="C:\JBA\cms\Test\Model Tipe\ModulType.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Verify Successful Menampilkan list data Type" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 13:59:48.221" level="FAIL">Variable '${URL}' not found.</msg>
+<status status="FAIL" starttime="20240102 13:59:48.221" endtime="20240102 13:59:48.226"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240102 13:59:48.226" endtime="20240102 13:59:48.228"/>
+</kw>
+<kw name="Click Modul Merek/Model/Type">
+<status status="NOT RUN" starttime="20240102 13:59:48.233" endtime="20240102 13:59:48.241"/>
+</kw>
+<kw name="Click Tab Type">
+<status status="NOT RUN" starttime="20240102 13:59:48.251" endtime="20240102 13:59:48.256"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240102 13:59:48.260" endtime="20240102 13:59:48.260"/>
+</kw>
+<doc>This test case verifies that user is able to show list data Type</doc>
+<tag>show</tag>
+<status status="FAIL" starttime="20240102 13:59:48.216" endtime="20240102 13:59:48.260">Variable '${URL}' not found.</status>
+</test>
+<doc>modul cabang</doc>
+<status status="FAIL" starttime="20240102 13:59:47.478" endtime="20240102 13:59:48.264"/>
+</suite>
+<status status="FAIL" starttime="20240102 13:59:47.466" endtime="20240102 13:59:48.271"/>
+</suite>
+<status status="FAIL" starttime="20240102 13:59:47.456" endtime="20240102 13:59:48.275"/>
+</suite>
+<status status="FAIL" starttime="20240102 13:59:47.446" endtime="20240102 13:59:48.277"/>
+</suite>
+<status status="FAIL" starttime="20240102 13:59:47.379" endtime="20240102 13:59:48.279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">show</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="JBA">JBA</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Cms">JBA.Cms</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test">JBA.Cms.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Model Tipe">JBA.Cms.Test.Model Tipe</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="ModulType">JBA.Cms.Test.Model Tipe.ModulType</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240102 13:59:48.194" level="ERROR">Error in file 'C:\JBA\cms\Test\Model Tipe\ModulType.robot' on line 4: Resource file '..\Resources\GlobalResources.robot' does not exist.</msg>
+<msg timestamp="20240102 13:59:48.207" level="ERROR">Error in file 'C:\JBA\cms\Test\Model Tipe\ModulType.robot' on line 5: Resource file '..\Resources\modulMerekModelTypeResources.robot' does not exist.</msg>
+</errors>
+</robot>
