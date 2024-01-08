@@ -11,6 +11,8 @@ create_car="//div[@id='add-form-modal']//div//div//div//div//div[@class='w-full'
 dropdown_objek_edit="xpath://div[@id='edit-form-modal']//div[@class='h-12 dropdown selectable-input' and @id='selectable-input-object-category']"
 edit_car="xpath://div[@id='edit-form-modal']//div//div//div//div//div[@class='w-full'][normalize-space()='Car']"
 edit_bike="xpath://div[@id='edit-form-modal']//div//div//div//div//div[@class='w-full'][normalize-space()='Bike']"
+filter_merek="testing"
+filter_invalid_merek="null"
 #Modul Model Test Data
 create_ob_model_car="xpath://div[@id='add-form-modal']//div//div//div//div//div[@class='w-full'][normalize-space()='Car']"
 create_ob_model_bike="xpath://div[@id='add-form-modal']//div//div//div//div//div[@class='w-full'][normalize-space()='Bike']"

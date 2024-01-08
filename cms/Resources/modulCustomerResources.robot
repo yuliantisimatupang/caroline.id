@@ -34,8 +34,11 @@ Input Fields Customer
     Input Text   ${input_no_ktp}  ${no_ktp}
     Input Text   ${input_no_npwp}  ${no_npwp}
     Wait Until Element Is Enabled  ${upload_ktp}
-    #${file_path}    Get File    ${file_ktp}
-    #Choose File  ${upload_ktp}  ${file_ktp}
+    ${file_contents}=    Run Keyword And Ignore Error    Get File    ${EXECDIR}/cms/Test/ModulCustomer/Test.png    encoding=UTF-8
+    #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
+    #${file_path}    Get File    ${IMAGE_PATH}  
+    #Click Element  ${upload_ktp}
+    Choose File  ${upload_ktp}  ${file_contents}
     #Choose File  ${upload_npwp}  ${file_npwp}
     Capture Page Screenshot
     Scroll Element Into View  ${button_selanjutnya}

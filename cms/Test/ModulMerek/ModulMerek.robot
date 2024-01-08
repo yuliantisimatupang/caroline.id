@@ -279,6 +279,28 @@ Verify Blank filter
     Click Tab Merek
     Click Button filter
     CLick Button Tampilkan
+Verify Berhasil Filter by Merek
+    [documentation]  This test case verifies that user is able to filter by Merek
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Merek/Model/Type
+    Click Tab Merek
+    Click Button filter
+    Filter by Merek
+    CLick Button Tampilkan
+    Close Browser
+Verify Berhasil Filter by Invalid Merek
+    [documentation]  This test case verifies that user is able to filter by Merek
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Merek/Model/Type
+    Click Tab Merek
+    Click Button filter
+    Filter by Invalid Merek
+    CLick Button Tampilkan
+    Close Browser
 Verify Berhasil Mengaktifkan Status
     [documentation]  This test case verifies that user is able to Activate Status
     [tags]  filter

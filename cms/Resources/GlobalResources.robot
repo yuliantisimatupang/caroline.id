@@ -90,6 +90,20 @@ Menonaktifkan Status
     Click Button  ${Ya_nonaktifkan}
     Log  Element is visible: ${status_off}
     Capture Page Screenshot
+Switch Status
+    Log  Element is visible: ${switch_detail_on_off}
+    Capture Page Screenshot
+    Click Element  ${switch_detail_on_off}
+Aktifkan Status
+    Wait Until Element Is Visible  ${Ya_aktifkan}
+    Capture Page Screenshot
+    Click Button  ${Ya_aktifkan}
+    Log  Element is visible: ${status_on}
+    Capture Page Screenshot
+Nonaktifkan Status
+    Click Button  ${Ya_nonaktifkan}
+    Log  Element is visible: ${status_off}
+    Capture Page Screenshot
 Verify Field Harus diisi
     Wait Until Page Contains    ${verify_wajib_isi}
     Capture Page Screenshot

@@ -47,6 +47,70 @@ Verify Successful delete data customer pada existing group
     Click Button Update
     Verify Berhasil Edit
     Close Browser
+Verify Successful Edit Kode Group
+    [documentation]  This test case verifies that user is able to edit code group
+    [tags]  edit
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button Edit Group
+    Input Edit Kode Group
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
+Verify Successful Edit Nama Group
+    [documentation]  This test case verifies that user is able to edit nama group
+    [tags]  edit
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button Edit Group
+    Input Edit Nama Group
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
+Verify Successful Edit Group dari List 
+    [documentation]  This test case verifies that user is able to edit group dari List
+    [tags]  edit
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button Edit Group
+    Input Edit Kode Group
+    Input Edit Nama Group
+    Delete Existing Group
+    Click Button Ya,Hapus
+    Verify Berhasil Delete Existing
+    Tambah Existing Group
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
+Verify Successful Edit Group dari View Detail 
+    [documentation]  This test case verifies that user is able to edit group dari view detail
+    [tags]  edit
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Edit Existing Group
+    Input Edit Kode Group
+    Input Edit Nama Group
+    Delete Existing Group
+    Click Button Ya,Hapus
+    Verify Berhasil Delete Existing
+    Tambah Existing Group
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
+Verify Successful Delete Group dari View Detail 
+    [documentation]  This test case verifies that user is able to delete group dari view detail
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Delete Group dari View Detail
+    Click Ya Hapus dari View
+    Verify Berhasil Delete
+    Close Browser
 Verify Successful Delete Data Group
     [documentation]  This test case verifies that user is able to delete data group
     [tags]  delete
@@ -63,6 +127,7 @@ Verify Successful View Detail Data Group
     Maximize Browser Window
     Click Modul Group
     View Data Group
+    Click Button Kembali
     Close Browser
 Verify Create Data Group Tanpa Data Customer
     [documentation]  This test case verifies that user is able to create new group tanpa data customer
@@ -124,6 +189,17 @@ Verify Berhasil Filter by Status Non Aktif
     Filter by Status Non Aktif
     CLick Button Tampilkan
     Close Browser
+Verify Berhasil Menonaktifkan Status
+    [documentation]  This test case verifies that user is able to Unactivate Status
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter by Status Aktif
+    CLick Button Tampilkan
+    Menonaktifkan Status
+    Close Browser
 Verify Berhasil Mengaktifkan Status
     [documentation]  This test case verifies that user is able to Activate Status
     [tags]  filter
@@ -135,7 +211,7 @@ Verify Berhasil Mengaktifkan Status
     CLick Button Tampilkan
     Mengaktifkan Status
     Close Browser
-Verify Berhasil Menonaktifkan Status
+Verify Berhasil Menonaktifkan Status dari View
     [documentation]  This test case verifies that user is able to Unactivate Status
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
@@ -144,6 +220,21 @@ Verify Berhasil Menonaktifkan Status
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
-    Menonaktifkan Status
+    View Data Group
+    Switch Status
+    Nonaktifkan Status
+    Close Browser
+Verify Berhasil Mengaktifkan Status dari View
+    [documentation]  This test case verifies that user is able to Activate Status from view
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter by Status Non Aktif
+    CLick Button Tampilkan
+    View Data Group
+    Switch Status
+    Aktifkan Status
     Close Browser
 *** Keywords ***

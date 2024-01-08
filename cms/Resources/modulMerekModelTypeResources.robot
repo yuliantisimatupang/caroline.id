@@ -39,6 +39,18 @@ Filter by Objek Lelang Bike
     Click Element  ${dropdown_objek_filter}
     Click Element  ${filter_bike}
     Capture Page Screenshot
+Filter by Merek
+    Wait Until Element Is Visible  ${input_filter_merek}  timeout=10s
+    Click Element  ${input_filter_merek}
+    Input Text  ${input_filter_merek}  ${filter_merek}
+    Capture Page Screenshot
+    Sleep    2s
+Filter by Invalid Merek
+    Wait Until Element Is Visible  ${input_filter_merek}  timeout=10s
+    Click Element  ${input_filter_merek}
+    Input Text  ${input_filter_merek}  ${filter_invalid_merek}
+    Capture Page Screenshot
+    Sleep    2s
 Click Button Create
     Wait Until Element Is Visible  ${button_create}  timeout=10s
     Click Button  ${button_create}

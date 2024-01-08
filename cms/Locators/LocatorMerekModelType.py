@@ -17,6 +17,7 @@ filter_bike="xpath://div[@class='flex items-center p-3 hover:bg-gray-200 dropdow
 semua_objek_lelang="xpath://div[contains(text(),'Semua Objek Lelang')]"
 filter_car="xpath://div[@class='flex items-center p-3 hover:bg-gray-200 dropdown-item dropdown-item-form-filter-object-category-id']//div[@class='w-full'][normalize-space()='Car']"
 input_nama_merek_edit="xpath://div[@id='edit-form-modal']//input[@name='name']"
+input_filter_merek="id:filter-name-value"
 #Modul Model
 button_create_model="xpath://button[@class='btn-active py-3 px-4 rounded-3xl flex items-center justify-center text-xs modal-button create-button']"
 pilih_merek="xpath://div[@id='selectable-input-brand']//div[@class='dropdown-button-ex relative']//div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex']"

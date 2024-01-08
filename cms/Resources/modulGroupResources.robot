@@ -44,6 +44,7 @@ Click Button Delete Group
 View Data Group
     Click Element  ${button_view}
     Capture Page Screenshot
+Click Button Kembali
     Click Element  ${button_kembali}
     Capture Page Screenshot
 Edit Existing Group
@@ -77,3 +78,25 @@ Verify Berhasil Delete Existing
     Click Element  ${Ya_Mengerti_Delete_GroupEx}
     Capture Page Screenshot
     Sleep    2s
+Click Button Edit Group
+    Click Element  ${aksi_group}
+    Click Element  ${edit_group}
+Input Edit Kode Group
+    ${random_text}      Generate Random String    ${max_length}
+    Click Element  ${edit_kode_group}
+    Clear Element Text  ${edit_kode_group}
+    Input Text  ${edit_kode_group}  ${kode_group_edit}  ${random_text}
+Input Edit Nama Group
+    ${random_text}      Generate Random String    ${max_length}
+    Click Element  ${edit_nama_group}
+    Clear Element Text  ${edit_nama_group}
+    Input Text  ${edit_nama_group}  ${nama_group_edit}  ${random_text}
+Delete Group dari View Detail
+    Click Element  ${button_view}
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${delete_dari_view}  timeout=10s
+    Click Element  ${delete_dari_view}
+    Capture Page Screenshot
+Click Ya Hapus dari View
+    Wait Until Element Is Visible  ${ya_hapus_view}  timeout=10s
+    Click Element  ${ya_hapus_view}
