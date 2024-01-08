@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240103 08:44:37.749" rpa="false" schemaversion="4">
-<suite id="s1" name="Robot Interactive Console" source="c:\Users\fathi\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240106 19:11:14.834" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Risnawati\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
 <kw name="Open Browser">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<msg timestamp="20240103 08:44:38.492" level="FAIL">No keyword with name 'Open Browser' found.</msg>
-<status status="FAIL" starttime="20240103 08:44:38.492" endtime="20240103 08:44:38.492"/>
+<msg timestamp="20240106 19:11:17.393" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20240106 19:11:17.393" endtime="20240106 19:11:17.393"/>
 </kw>
 <kw name="Maximize Browser Window">
-<status status="NOT RUN" starttime="20240103 08:44:38.493" endtime="20240103 08:44:38.493"/>
+<status status="NOT RUN" starttime="20240106 19:11:17.395" endtime="20240106 19:11:17.395"/>
 </kw>
-<kw name="Click Modul Cabang">
-<status status="NOT RUN" starttime="20240103 08:44:38.494" endtime="20240103 08:44:38.494"/>
+<kw name="Click Modul Customer">
+<status status="NOT RUN" starttime="20240106 19:11:17.397" endtime="20240106 19:11:17.397"/>
 </kw>
-<kw name="Click Button Add">
-<status status="NOT RUN" starttime="20240103 08:44:38.494" endtime="20240103 08:44:38.494"/>
+<kw name="Click Button filter">
+<status status="NOT RUN" starttime="20240106 19:11:17.399" endtime="20240106 19:11:17.399"/>
 </kw>
-<kw name="Input Fields Cabang">
-<status status="NOT RUN" starttime="20240103 08:44:38.496" endtime="20240103 08:44:38.496"/>
+<kw name="Filter by All Status">
+<status status="NOT RUN" starttime="20240106 19:11:17.401" endtime="20240106 19:11:17.401"/>
 </kw>
-<kw name="Click Button Simpan">
-<status status="NOT RUN" starttime="20240103 08:44:38.497" endtime="20240103 08:44:38.497"/>
-</kw>
-<kw name="Verify Berhasil Create">
-<status status="NOT RUN" starttime="20240103 08:44:38.497" endtime="20240103 08:44:38.498"/>
+<kw name="CLick Button Tampilkan">
+<status status="NOT RUN" starttime="20240106 19:11:17.403" endtime="20240106 19:11:17.403"/>
 </kw>
 <kw name="Close Browser">
-<status status="NOT RUN" starttime="20240103 08:44:38.498" endtime="20240103 08:44:38.498"/>
+<status status="NOT RUN" starttime="20240106 19:11:17.405" endtime="20240106 19:11:17.405"/>
 </kw>
-<status status="PASS" starttime="20240103 08:44:37.788" endtime="20240103 08:44:41.613"/>
+<status status="PASS" starttime="20240106 19:11:14.881" endtime="20240106 19:11:30.242"/>
 </kw>
-<status status="PASS" starttime="20240103 08:44:37.788" endtime="20240103 08:44:41.613"/>
+<status status="PASS" starttime="20240106 19:11:14.881" endtime="20240106 19:11:30.243"/>
 </test>
-<status status="PASS" starttime="20240103 08:44:37.758" endtime="20240103 08:44:41.614"/>
+<status status="PASS" starttime="20240106 19:11:14.834" endtime="20240106 19:11:30.244"/>
 </suite>
 <statistics>
 <total>

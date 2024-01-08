@@ -29,6 +29,8 @@ Click Button Edit
     #Wait Until Element Is Visible  ${button_edit}  timeout=10s
     Click Button  ${button_edit}
 Click Button Update
+    Wait Until Element Is Visible  ${update}  timeout=10s
+    Sleep    3s
     Click Button  ${update}
     Capture Page Screenshot
 Verify Berhasil Edit
@@ -38,7 +40,6 @@ Verify Berhasil Edit
     Click Element  ${Ya_Mengerti_Update}
     Sleep    2s
     Capture Page Screenshot
-
 Verify Berhasil Delete
     Wait Until Element Is Visible  ${Ya_Mengerti_Delete}  timeout=10s
     Capture Page Screenshot
@@ -95,3 +96,18 @@ Verify Field Harus diisi
 Verify Terjadi Kesalahan
     Wait Until Page Contains    ${verify_terjadi_kesalahan}
     Capture Page Screenshot
+Pilih Size Table
+    Scroll Element Into View  ${dropdown_size_table}
+    Wait Until Element Is Visible  ${dropdown_size_table}
+    Click Element  ${dropdown_size_table}
+    Click Element  ${size_table_20}
+Verify List Data
+    Wait Until Element Is Visible  ${tabel_20}
+    Page Should Contain Element    ${tabel_20}
+    Capture Page Screenshot
+Verify Page Transition
+    Click Element    ${page2}
+    Location Should Be    ${URL_Page2_cms}
+Click Button Ya,Hapus
+    Wait Until Element Is Visible  ${Ya_hapus}  timeout=10s
+    Click Element  ${Ya_hapus} 

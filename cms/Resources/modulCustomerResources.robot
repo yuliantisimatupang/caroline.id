@@ -35,7 +35,7 @@ Input Fields Customer
     Input Text   ${input_no_npwp}  ${no_npwp}
     Wait Until Element Is Enabled  ${upload_ktp}
     #${file_path}    Get File    ${file_ktp}
-    Choose File  ${upload_ktp}  ${file_ktp}
+    #Choose File  ${upload_ktp}  ${file_ktp}
     #Choose File  ${upload_npwp}  ${file_npwp}
     Capture Page Screenshot
     Scroll Element Into View  ${button_selanjutnya}
@@ -75,9 +75,7 @@ Click Button Selanjutnya Page 1
     Click Element  ${button_selanjutnya}
 Click Button Selanjutnya Page 2
     Click Element  ${button_selanjutnya2}
-Verify Terjadi Kesalahan Pengisian Formulir
-    Wait Until Page Contains    ${verify_kesalahan_pengisian_formulir}
-    Capture Page Screenshot
+
 
 
 

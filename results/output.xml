@@ -1,64 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240102 13:59:47.347" rpa="false" schemaversion="4">
-<suite id="s1" name="JBA" source="C:\JBA">
-<suite id="s1-s1" name="Cms" source="C:\JBA\cms">
-<suite id="s1-s1-s1" name="Test" source="C:\JBA\cms\Test">
-<suite id="s1-s1-s1-s1" name="Model Tipe" source="C:\JBA\cms\Test\Model Tipe">
-<suite id="s1-s1-s1-s1-s1" name="ModulType" source="C:\JBA\cms\Test\Model Tipe\ModulType.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Verify Successful Menampilkan list data Type" line="8">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240106 21:18:51.316" rpa="false" schemaversion="4">
+<suite id="s1" name="JBA" source="C:\Users\Risnawati\Downloads\JBA">
+<suite id="s1-s1" name="Cms" source="C:\Users\Risnawati\Downloads\JBA\cms">
+<suite id="s1-s1-s1" name="Test" source="C:\Users\Risnawati\Downloads\JBA\cms\Test">
+<suite id="s1-s1-s1-s1" name="ModulGroup" source="C:\Users\Risnawati\Downloads\JBA\cms\Test\ModulGroup">
+<suite id="s1-s1-s1-s1-s1" name="ModulGroup" source="C:\Users\Risnawati\Downloads\JBA\cms\Test\ModulGroup\ModulGroup.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Verify Successful Menambahkan data customer pada existing group" line="26">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240102 13:59:48.221" level="FAIL">Variable '${URL}' not found.</msg>
-<status status="FAIL" starttime="20240102 13:59:48.221" endtime="20240102 13:59:48.226"/>
+<msg timestamp="20240106 21:18:53.776" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 21:18:53.768" endtime="20240106 21:19:01.219"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20240102 13:59:48.226" endtime="20240102 13:59:48.228"/>
+<status status="PASS" starttime="20240106 21:19:01.227" endtime="20240106 21:19:01.625"/>
 </kw>
-<kw name="Click Modul Merek/Model/Type">
-<status status="NOT RUN" starttime="20240102 13:59:48.233" endtime="20240102 13:59:48.241"/>
+<kw name="Click Modul Group" library="modulGroupResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_group}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 21:19:01.634" level="INFO">Clicking element 'xpath://span[normalize-space()='Group']'.</msg>
+<status status="PASS" starttime="20240106 21:19:01.625" endtime="20240106 21:19:02.220"/>
 </kw>
-<kw name="Click Tab Type">
-<status status="NOT RUN" starttime="20240102 13:59:48.251" endtime="20240102 13:59:48.256"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 21:19:02.584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 21:19:02.220" endtime="20240106 21:19:02.584"/>
+</kw>
+<status status="PASS" starttime="20240106 21:19:01.625" endtime="20240106 21:19:02.584"/>
+</kw>
+<kw name="Edit Existing Group" library="modulGroupResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_view}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 21:19:02.592" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[6]/div[1]/button[1]//*[name()='svg']'.</msg>
+<status status="PASS" starttime="20240106 21:19:02.592" endtime="20240106 21:19:02.756"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 21:19:03.178" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 21:19:02.756" endtime="20240106 21:19:03.178"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${edit_existing}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 21:19:03.188" endtime="20240106 21:19:03.265"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${edit_existing}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 21:19:03.265" level="INFO">Clicking element 'xpath://span[normalize-space()='Edit']'.</msg>
+<status status="PASS" starttime="20240106 21:19:03.265" endtime="20240106 21:19:03.383"/>
+</kw>
+<status status="PASS" starttime="20240106 21:19:02.584" endtime="20240106 21:19:03.383"/>
+</kw>
+<kw name="Tambah Existing Group" library="modulGroupResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tambah_existing}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 21:19:03.502" endtime="20240106 21:19:03.669"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 21:19:06.685" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240106 21:19:03.669" endtime="20240106 21:19:06.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${tambah_existing}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 21:19:06.700" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-edit-modal']//div//div//div//div//div//div//div//div//button[@target='customer-search']'.</msg>
+<status status="PASS" starttime="20240106 21:19:06.700" endtime="20240106 21:19:06.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_cari_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 21:19:06.953" level="INFO">Clicking element 'xpath://input[contains(@placeholder,'Cari customer disini')]'.</msg>
+<msg timestamp="20240106 21:19:07.350" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240106 21:19:07.350" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF680092142+3514994]
+	(No symbol) [0x00007FF67FCB0CE2]
+	(No symbol) [0x00007FF67FB576AA]
+	(No symbol) [0x00007FF67FB5CFC0]
+	(No symbol) [0x00007FF67FB5F38F]
+	(No symbol) [0x00007FF67FB5F480]
+	(No symbol) [0x00007FF67FBA3569]
+	(No symbol) [0x00007FF67FBA2966]
+	(No symbol) [0x00007FF67FB96A0F]
+	(No symbol) [0x00007FF67FBC5FEA]
+	(No symbol) [0x00007FF67FB963B6]
+	(No symbol) [0x00007FF67FBC6490]
+	(No symbol) [0x00007FF67FBE28F6]
+	(No symbol) [0x00007FF67FBC5D93]
+	(No symbol) [0x00007FF67FB94BDC]
+	(No symbol) [0x00007FF67FB95C64]
+	GetHandleVerifier [0x00007FF6800BE16B+3695259]
+	GetHandleVerifier [0x00007FF680116737+4057191]
+	GetHandleVerifier [0x00007FF68010E4E3+4023827]
+	GetHandleVerifier [0x00007FF67FDE04F9+689705]
+	(No symbol) [0x00007FF67FCBC048]
+	(No symbol) [0x00007FF67FCB8044]
+	(No symbol) [0x00007FF67FCB81C9]
+	(No symbol) [0x00007FF67FCA88C4]
+	BaseThreadInitThunk [0x00007FFD0B0B7BD4+20]
+	RtlUserThreadStart [0x00007FFD0B32CED1+33]
+</msg>
+<status status="FAIL" starttime="20240106 21:19:06.953" endtime="20240106 21:19:07.350"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_cari_customer}</arg>
+<arg>${customer}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${input_cari_customer}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkbox1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkbox2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tambahkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 21:19:07.358" endtime="20240106 21:19:07.358"/>
+</kw>
+<status status="FAIL" starttime="20240106 21:19:03.502" endtime="20240106 21:19:07.358"/>
+</kw>
+<kw name="Click Button Update" library="GlobalResources">
+<status status="NOT RUN" starttime="20240106 21:19:07.384" endtime="20240106 21:19:07.384"/>
+</kw>
+<kw name="Verify Berhasil Edit" library="GlobalResources">
+<status status="NOT RUN" starttime="20240106 21:19:07.384" endtime="20240106 21:19:07.384"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20240102 13:59:48.260" endtime="20240102 13:59:48.260"/>
+<status status="NOT RUN" starttime="20240106 21:19:07.384" endtime="20240106 21:19:07.384"/>
 </kw>
-<doc>This test case verifies that user is able to show list data Type</doc>
-<tag>show</tag>
-<status status="FAIL" starttime="20240102 13:59:48.216" endtime="20240102 13:59:48.260">Variable '${URL}' not found.</status>
+<doc>This test case verifies that user is able to  menambahkan data customer pada existing group</doc>
+<tag>add</tag>
+<status status="FAIL" starttime="20240106 21:18:53.705" endtime="20240106 21:19:07.384">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF680092142+3514994]
+	(No symbol) [0x00007FF67FCB0CE2]
+	(No symbol) [0x00007FF67FB576AA]
+	(No symbol) [0x00007FF67FB5CFC0]
+	(No symbol) [0x00007FF67FB5F38F]
+	(No symbol) [0x00007FF67FB5F480]
+	(No symbol) [0x00007FF67FBA3569]
+	(No symbol) [0x00007FF67FBA2966]
+	(No symbol) [0x00007FF67FB96A0F]
+	(No symbol) [0x00007FF67FBC5FEA]
+	(No symbol) [0x00007FF67FB963B6]
+	(No symbol) [0x00007FF67FBC6490]
+	(No symbol) [0x00007FF67FBE28F6]
+	(No symbol) [0x00007FF67FBC5D93]
+	(No symbol) [0x00007FF67FB94BDC]
+	(No symbol) [0x00007FF67FB95C64]
+	GetHandleVerifier [0x00007FF6800BE16B+3695259]
+	GetHandleVerifier [0x00007FF680116737+4057191]
+	GetHandleVerifier [0x00007FF68010E4E3+4023827]
+	GetHandleVerifier [0x00007FF67FDE04F9+689705]
+	(No symbol) [0x00007FF67FCBC048]
+	(No symbol) [0x00007FF67FCB8044]
+	(No symbol) [0x00007FF67FCB81C9]
+	(No symbol) [0x00007FF67FCA88C4]
+	BaseThreadInitThunk [0x00007FFD0B0B7BD4+20]
+	RtlUserThreadStart [0x00007FFD0B32CED1+33]
+</status>
 </test>
-<doc>modul cabang</doc>
-<status status="FAIL" starttime="20240102 13:59:47.478" endtime="20240102 13:59:48.264"/>
+<doc>modul group</doc>
+<status status="FAIL" starttime="20240106 21:18:51.580" endtime="20240106 21:19:07.392"/>
 </suite>
-<status status="FAIL" starttime="20240102 13:59:47.466" endtime="20240102 13:59:48.271"/>
+<status status="FAIL" starttime="20240106 21:18:51.551" endtime="20240106 21:19:07.483"/>
 </suite>
-<status status="FAIL" starttime="20240102 13:59:47.456" endtime="20240102 13:59:48.275"/>
+<status status="FAIL" starttime="20240106 21:18:51.518" endtime="20240106 21:19:07.517"/>
 </suite>
-<status status="FAIL" starttime="20240102 13:59:47.446" endtime="20240102 13:59:48.277"/>
+<status status="FAIL" starttime="20240106 21:18:51.455" endtime="20240106 21:19:07.581"/>
 </suite>
-<status status="FAIL" starttime="20240102 13:59:47.379" endtime="20240102 13:59:48.279"/>
+<status status="FAIL" starttime="20240106 21:18:51.332" endtime="20240106 21:19:07.605"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">show</stat>
+<stat pass="0" fail="1" skip="0">add</stat>
 </tag>
 <suite>
 <stat pass="0" fail="1" skip="0" id="s1" name="JBA">JBA</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1" name="Cms">JBA.Cms</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test">JBA.Cms.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Model Tipe">JBA.Cms.Test.Model Tipe</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="ModulType">JBA.Cms.Test.Model Tipe.ModulType</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="ModulGroup">JBA.Cms.Test.ModulGroup</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="ModulGroup">JBA.Cms.Test.ModulGroup.ModulGroup</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240102 13:59:48.194" level="ERROR">Error in file 'C:\JBA\cms\Test\Model Tipe\ModulType.robot' on line 4: Resource file '..\Resources\GlobalResources.robot' does not exist.</msg>
-<msg timestamp="20240102 13:59:48.207" level="ERROR">Error in file 'C:\JBA\cms\Test\Model Tipe\ModulType.robot' on line 5: Resource file '..\Resources\modulMerekModelTypeResources.robot' does not exist.</msg>
 </errors>
 </robot>

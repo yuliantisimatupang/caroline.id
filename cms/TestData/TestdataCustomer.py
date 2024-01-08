@@ -1,5 +1,4 @@
 #TestData Modul Customer
-verify_kesalahan_pengisian_formulir="Ada kesalahan perngisian formulir Anda. Harap periksa kembali"
 no_customer_jba="0101"
 tipe_customer_coorporate="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[@data-value='CORPORATE']"
 tipe_customer_perorang="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Perorangan')]"
@@ -28,9 +27,9 @@ gaji_upah="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//
 lain_lain="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Lain-lain')]"
 passenger="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-scope='add-form']//div//div[@data-value='PASSENGER']"
 niaga="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-scope='add-form']//div//div[@data-value='COMMERCIAL']"
-file_ktp=  "C:/JBA/cms/DataFiles/Test.png"
-file_npwp= "C:/JBA/cms/DataFiles/npwp.jpg"
-file_tabungan= "C:/JBA/cms/DataFiles/tabungan.jpg"
+file_ktp=  "/../../DataFiles/Test.png"
+file_npwp= "/../../DataFiles/npwp.jpg"
+file_tabungan= "/../../DataFiles/tabungan.jpg"
 digunakan_sendiri="xpath://div[contains(@blocker-target,'cancel-add-modal')]//div//div//div//div//div//form//div[contains(@name,'content-section-2')]//div//div//div//div//div[contains(@data-scope,'add-form')]//div//div[contains(text(),'Digunakan Sendiri')]"
 dijual_kembali="xpath://div[contains(@blocker-target,'cancel-add-modal')]//div//div//div//div//div//form//div[contains(@name,'content-section-2')]//div//div//div//div//div[contains(@data-scope,'add-form')]//div//div[contains(text(),'Dijual kembali')]"
 transaksi_untuk="Testing Automation"

@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240106 19:14:08.254" rpa="false" schemaversion="4">
+<suite id="s1" name="ModulCustomer" source="C:\Users\Risnawati\Downloads\JBA\cms\Test\ModulCustomer\ModulCustomer.robot">
+<test id="s1-t1" name="Verify Successful Menampilkan list data customer" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:14:08.821" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:14:08.821" endtime="20240106 19:14:14.218"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:14:14.222" endtime="20240106 19:14:14.441"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:14.445" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:14:14.443" endtime="20240106 19:14:15.069"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:15.300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:15.069" endtime="20240106 19:14:15.300"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:14.442" endtime="20240106 19:14:15.301"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:14:15.340" endtime="20240106 19:14:19.965"/>
+</kw>
+<doc>This test case verifies that user is able to show list data customer</doc>
+<tag>show</tag>
+<status status="PASS" starttime="20240106 19:14:08.821" endtime="20240106 19:14:19.965"/>
+</test>
+<test id="s1-t2" name="Verify Successful Create Data Customer" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:14:19.965" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:14:19.965" endtime="20240106 19:14:24.801"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:14:24.802" endtime="20240106 19:14:25.093"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:25.095" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:14:25.095" endtime="20240106 19:14:25.779"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:26.045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:25.779" endtime="20240106 19:14:26.045"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:25.095" endtime="20240106 19:14:26.045"/>
+</kw>
+<kw name="Click Button Create Customer" library="modulCustomerResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_create}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:14:26.045" endtime="20240106 19:14:26.135"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_create}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:26.136" level="INFO">Clicking button 'xpath://button[@class='btn-active py-3 px-4 rounded-3xl flex items-center justify-center text-xs modal-button create-button']'.</msg>
+<status status="PASS" starttime="20240106 19:14:26.135" endtime="20240106 19:14:26.267"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:26.045" endtime="20240106 19:14:26.267"/>
+</kw>
+<kw name="Input Fields Customer" library="modulCustomerResources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_customer_jba}</arg>
+<arg>${no_customer_jba}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:26.279" level="INFO">Typing text '0101' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Customer JBA']'.</msg>
+<status status="PASS" starttime="20240106 19:14:26.278" endtime="20240106 19:14:26.626"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_pilih_tipe_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:26.627" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-customer-type']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:26.627" endtime="20240106 19:14:26.795"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${tipe_customer_perorang}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:26.796" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Perorangan')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:26.795" endtime="20240106 19:14:26.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_pilih_membership}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:26.887" level="INFO">Clicking element '//div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-membership-id']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:26.886" endtime="20240106 19:14:27.005"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${membership_regular}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:27.006" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div//div[contains(text(),'REGULAR')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:27.006" endtime="20240106 19:14:27.120"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nama_depan}</arg>
+<arg>${nama_depan}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:27.120" level="INFO">Typing text 'Testing' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Nama Depan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:27.120" endtime="20240106 19:14:27.302"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nama_belakang}</arg>
+<arg>${nama_belakang}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:27.302" level="INFO">Typing text 'Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Nama Belakang']'.</msg>
+<status status="PASS" starttime="20240106 19:14:27.302" endtime="20240106 19:14:27.568"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_ponsel}</arg>
+<arg>${no_ponsel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:27.569" level="INFO">Typing text '087791234324' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Ponsel']'.</msg>
+<status status="PASS" starttime="20240106 19:14:27.568" endtime="20240106 19:14:27.814"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:27.814" level="INFO">Typing text 'caca@gmail.com' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Email']'.</msg>
+<status status="PASS" starttime="20240106 19:14:27.814" endtime="20240106 19:14:28.062"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_ponsel}</arg>
+<arg>${no_ponsel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:28.062" level="INFO">Typing text '087791234324' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Ponsel']'.</msg>
+<status status="PASS" starttime="20240106 19:14:28.062" endtime="20240106 19:14:28.278"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_tempat_lahir}</arg>
+<arg>${tempat_lahir}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:28.279" level="INFO">Typing text 'Jakarta' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Tempat Lahir']'.</msg>
+<status status="PASS" starttime="20240106 19:14:28.278" endtime="20240106 19:14:28.443"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_tanggal_lahir}</arg>
+<arg>${tanggal_lahir}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:28.443" level="INFO">Typing text '12121999' into text field 'xpath://div[contains(@blocker-target,'cancel-add-modal')]//div//div//div//div//div//form//div[contains(@name,'content-section-0')]//div//div//div//input[contains(@name,'birthDate')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:28.443" endtime="20240106 19:14:28.609"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:28.825" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:28.610" endtime="20240106 19:14:28.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_jenis_kelamin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:28.825" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-gender']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:28.825" endtime="20240106 19:14:28.930"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${wanita}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:28.931" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Wanita')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:28.930" endtime="20240106 19:14:29.017"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nama_kota}</arg>
+<arg>${kota}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:29.017" level="INFO">Typing text 'Jakarta' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Kota']'.</msg>
+<status status="PASS" starttime="20240106 19:14:29.017" endtime="20240106 19:14:29.184"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_alamat}</arg>
+<arg>${alamat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:29.194" level="INFO">Typing text 'jl.kemang no 31' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Alamat']'.</msg>
+<status status="PASS" starttime="20240106 19:14:29.193" endtime="20240106 19:14:29.368"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_ktp}</arg>
+<arg>${no_ktp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:29.368" level="INFO">Typing text '5171032103720031' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No KTP']'.</msg>
+<status status="PASS" starttime="20240106 19:14:29.368" endtime="20240106 19:14:29.602"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_npwp}</arg>
+<arg>${no_npwp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:29.603" level="INFO">Typing text '044055066100000' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No NPWP']'.</msg>
+<status status="PASS" starttime="20240106 19:14:29.602" endtime="20240106 19:14:29.819"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${upload_ktp}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240106 19:14:29.819" endtime="20240106 19:14:29.876"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:30.027" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:29.876" endtime="20240106 19:14:30.027"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${button_selanjutnya}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240106 19:14:30.027" endtime="20240106 19:14:30.369"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_selanjutnya}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:30.370" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//button[@type='button'][normalize-space()='Selanjutnya']'.</msg>
+<status status="PASS" starttime="20240106 19:14:30.369" endtime="20240106 19:14:30.468"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nama_bank}</arg>
+<arg>${nama_bank}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:30.468" level="INFO">Typing text 'BCA' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-1']//div//div//div//input[@placeholder='Ketik Nama Bank']'.</msg>
+<status status="PASS" starttime="20240106 19:14:30.468" endtime="20240106 19:14:30.718"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_cabang_bank}</arg>
+<arg>${cabang_bank}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:30.718" level="INFO">Typing text 'Cab.Kemang' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-1']//div//div//div//input[@placeholder='Ketik Cabang Bank']'.</msg>
+<status status="PASS" starttime="20240106 19:14:30.718" endtime="20240106 19:14:31.069"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_no_rekening}</arg>
+<arg>${no_rekening}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.069" level="INFO">Typing text '5410425731' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-1']//div//div//div//input[@placeholder='Ketik Nomor Rekening']'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.069" endtime="20240106 19:14:31.247"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_catatan}</arg>
+<arg>${Catatan}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.247" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-1']//div//div//div//textarea[@placeholder='Ketik Catatan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.247" endtime="20240106 19:14:31.515"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:31.677" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:31.515" endtime="20240106 19:14:31.677"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_selanjutnya}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240106 19:14:31.677" endtime="20240106 19:14:31.743"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_selanjutnya2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.744" level="INFO">Clicking element 'xpath://div[@class='milestone-form']//div[@class='flex mt-auto']//button[@type='button'][normalize-space()='Selanjutnya']'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.743" endtime="20240106 19:14:31.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_tujuan_beli}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.832" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-value='form-buy-purpose']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.832" endtime="20240106 19:14:31.916"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${digunakan_sendiri}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.916" level="INFO">Clicking element 'xpath://div[contains(@blocker-target,'cancel-add-modal')]//div//div//div//div//div//form//div[contains(@name,'content-section-2')]//div//div//div//div//div[contains(@data-scope,'add-form')]//div//div[contains(text(),'Digunakan Sendiri')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.916" endtime="20240106 19:14:31.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_sumber_dana}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:31.996" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-value='form-source-of-funds']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:31.996" endtime="20240106 19:14:32.089"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${gaji_upah}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.090" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Gaji/Upah')]'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.090" endtime="20240106 19:14:32.185"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_transaksi_untuk}</arg>
+<arg>${transaksi_untuk}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.185" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Transaksi Untuk']'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.185" endtime="20240106 19:14:32.378"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_jenis_kendaraan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.378" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-value='form-vehicle-type']//div'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.378" endtime="20240106 19:14:32.495"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${niaga}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.496" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//div//div[@data-scope='add-form']//div//div[@data-value='COMMERCIAL']'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.495" endtime="20240106 19:14:32.592"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_other1}</arg>
+<arg>${other}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.594" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Other 1']'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.593" endtime="20240106 19:14:32.798"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_other2}</arg>
+<arg>${other}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.798" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Other 2']'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.798" endtime="20240106 19:14:32.995"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_other3}</arg>
+<arg>${other}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:32.995" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Other 3']'.</msg>
+<status status="PASS" starttime="20240106 19:14:32.995" endtime="20240106 19:14:33.319"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_other4}</arg>
+<arg>${other}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:33.319" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Other 4']'.</msg>
+<status status="PASS" starttime="20240106 19:14:33.319" endtime="20240106 19:14:33.566"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_other5}</arg>
+<arg>${other}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:33.566" level="INFO">Typing text 'Testing Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-2']//div//div//div//input[@placeholder='Ketik Other 5']'.</msg>
+<status status="PASS" starttime="20240106 19:14:33.566" endtime="20240106 19:14:33.781"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_on_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:33.781" level="INFO">Clicking element 'xpath://div[@class='milestone-form']//span[@class='switch-ex w-4 h-4 left-1.5-min absolute rounded-full transform transition-transform bg-slider-off']'.</msg>
+<status status="PASS" starttime="20240106 19:14:33.781" endtime="20240106 19:14:33.875"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:34.077" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:33.875" endtime="20240106 19:14:34.077"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:26.269" endtime="20240106 19:14:34.077"/>
+</kw>
+<kw name="Click Button Simpan" library="GlobalResources">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:34.272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:34.077" endtime="20240106 19:14:34.272"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${simpan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:34.272" level="INFO">Clicking button 'xpath://button[normalize-space()='Simpan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:34.272" endtime="20240106 19:14:34.406"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:34.077" endtime="20240106 19:14:34.406"/>
+</kw>
+<kw name="Click Button Ya Simpan" library="modulCustomerResources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_ya_simpan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:34.412" level="INFO">Clicking button 'xpath://div[@id='confirm-save-customer-modal']//button[@class='real-submit-form close-modal btn-active py-4 px-5 rounded-3xl text-sm mx-2 w-32 flex justify-center items-center'][normalize-space()='Ya, Simpan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:34.412" endtime="20240106 19:14:34.544"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:34.411" endtime="20240106 19:14:34.544"/>
+</kw>
+<kw name="Verify Berhasil Create" library="GlobalResources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:14:36.545" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:14:34.545" endtime="20240106 19:14:36.545"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Ya_Mengerti_Create}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240106 19:14:46.924" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240106 19:14:46.924" level="FAIL">Element 'xpath://div[@id='success-modal']//a[@class='btn-active py-4 px-5 rounded-3xl text-sm'][normalize-space()='Ya, Mengerti']' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20240106 19:14:36.545" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Formulir telah berhasil dikirimkan</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ya_Mengerti_Create}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<status status="FAIL" starttime="20240106 19:14:34.545" endtime="20240106 19:14:46.959"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240106 19:14:46.959" endtime="20240106 19:14:46.959"/>
+</kw>
+<doc>This test case verifies that user is able to create new customer</doc>
+<tag>add</tag>
+<status status="FAIL" starttime="20240106 19:14:19.965" endtime="20240106 19:14:46.959">Element 'xpath://div[@id='success-modal']//a[@class='btn-active py-4 px-5 rounded-3xl text-sm'][normalize-space()='Ya, Mengerti']' not visible after 10 seconds.</status>
+</test>
+<test id="s1-t3" name="Verify tidak dapat create Customer dengan blank all field" line="27">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:14:46.969" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:14:46.969" endtime="20240106 19:14:53.818"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:14:53.818" endtime="20240106 19:14:54.233"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:54.252" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:14:54.251" endtime="20240106 19:14:55.595"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:55.766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:55.596" endtime="20240106 19:14:55.766"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:54.250" endtime="20240106 19:14:55.766"/>
+</kw>
+<kw name="Click Button Create Customer" library="modulCustomerResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_create}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:14:55.781" endtime="20240106 19:14:55.880"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_create}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:55.880" level="INFO">Clicking button 'xpath://button[@class='btn-active py-3 px-4 rounded-3xl flex items-center justify-center text-xs modal-button create-button']'.</msg>
+<status status="PASS" starttime="20240106 19:14:55.880" endtime="20240106 19:14:56.092"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:55.781" endtime="20240106 19:14:56.102"/>
+</kw>
+<kw name="Click Button Selanjutnya Page 1" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_selanjutnya}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:56.132" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//button[@type='button'][normalize-space()='Selanjutnya']'.</msg>
+<status status="PASS" starttime="20240106 19:14:56.132" endtime="20240106 19:14:56.708"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:56.132" endtime="20240106 19:14:56.708"/>
+</kw>
+<kw name="Click Button Selanjutnya Page 2" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_selanjutnya2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:56.765" level="INFO">Clicking element 'xpath://div[@class='milestone-form']//div[@class='flex mt-auto']//button[@type='button'][normalize-space()='Selanjutnya']'.</msg>
+<status status="PASS" starttime="20240106 19:14:56.765" endtime="20240106 19:14:57.028"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:56.764" endtime="20240106 19:14:57.028"/>
+</kw>
+<kw name="Click Button Simpan" library="GlobalResources">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:14:57.252" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:14:57.034" endtime="20240106 19:14:57.252"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${simpan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:57.252" level="INFO">Clicking button 'xpath://button[normalize-space()='Simpan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:57.252" endtime="20240106 19:14:57.555"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:57.034" endtime="20240106 19:14:57.555"/>
+</kw>
+<kw name="Click Button Ya Simpan" library="modulCustomerResources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_ya_simpan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:14:57.578" level="INFO">Clicking button 'xpath://div[@id='confirm-save-customer-modal']//button[@class='real-submit-form close-modal btn-active py-4 px-5 rounded-3xl text-sm mx-2 w-32 flex justify-center items-center'][normalize-space()='Ya, Simpan']'.</msg>
+<status status="PASS" starttime="20240106 19:14:57.578" endtime="20240106 19:14:57.962"/>
+</kw>
+<status status="PASS" starttime="20240106 19:14:57.578" endtime="20240106 19:14:57.962"/>
+</kw>
+<kw name="Verify Terjadi Kesalahan Pengisian Formulir" library="modulCustomerResources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${verify_kesalahan_pengisian_formulir}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20240106 19:15:03.343" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240106 19:15:03.343" level="FAIL">Text 'Ada kesalahan perngisian formulir Anda. Harap periksa kembali' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20240106 19:14:58.010" endtime="20240106 19:15:03.343"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20240106 19:15:03.343" endtime="20240106 19:15:03.343"/>
+</kw>
+<status status="FAIL" starttime="20240106 19:14:58.010" endtime="20240106 19:15:03.343"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240106 19:15:03.343" endtime="20240106 19:15:03.343"/>
+</kw>
+<doc>This test case verifies that user tidak dapat create Customer dengan blank all field</doc>
+<tag>add</tag>
+<status status="FAIL" starttime="20240106 19:14:46.969" endtime="20240106 19:15:03.343">Text 'Ada kesalahan perngisian formulir Anda. Harap periksa kembali' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="Verify Successful Delete Data Customer" line="40">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:15:03.358" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:15:03.343" endtime="20240106 19:15:09.676"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:15:09.677" endtime="20240106 19:15:10.033"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:10.034" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:15:10.033" endtime="20240106 19:15:10.631"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:10.973" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:10.631" endtime="20240106 19:15:10.973"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:10.033" endtime="20240106 19:15:10.975"/>
+</kw>
+<kw name="Click Button Delete Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${aksi_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:10.983" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[9]/div[1]/div[1]/div[1]//*[name()='svg']'.</msg>
+<status status="PASS" starttime="20240106 19:15:10.981" endtime="20240106 19:15:11.493"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:11.494" level="INFO">Clicking element 'xpath://div[@id='dropdown-menu-0']//div[contains(text(),'Delete')]'.</msg>
+<status status="PASS" starttime="20240106 19:15:11.493" endtime="20240106 19:15:11.770"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:11.984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:11.771" endtime="20240106 19:15:11.984"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ya_Hapus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:11.985" level="INFO">Clicking element 'xpath://button[normalize-space()='Ya, Hapus']'.</msg>
+<status status="PASS" starttime="20240106 19:15:11.984" endtime="20240106 19:15:12.233"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:10.981" endtime="20240106 19:15:12.233"/>
+</kw>
+<kw name="Verify Berhasil Delete" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Ya_Mengerti_Delete}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:12.235" endtime="20240106 19:15:12.367"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:12.551" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:12.367" endtime="20240106 19:15:12.551"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:15:14.551" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:15:12.551" endtime="20240106 19:15:14.551"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ya_Mengerti_Delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:14.552" level="INFO">Clicking element 'xpath://div[@id='success-delete-modal']//a[@class='btn-active py-4 px-5 rounded-3xl text-sm'][normalize-space()='Ya, Mengerti']'.</msg>
+<status status="PASS" starttime="20240106 19:15:14.551" endtime="20240106 19:15:15.053"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:15.242" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:15.054" endtime="20240106 19:15:15.242"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:15:15.242" endtime="20240106 19:15:17.506"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:12.234" endtime="20240106 19:15:17.506"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:15:17.506" endtime="20240106 19:15:17.506"/>
+</kw>
+<doc>This test case verifies that user is able to delete data customer</doc>
+<tag>delete</tag>
+<status status="PASS" starttime="20240106 19:15:03.343" endtime="20240106 19:15:17.506"/>
+</test>
+<test id="s1-t5" name="Verify Berhasil Filter by All Status" line="49">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:15:17.506" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:15:17.506" endtime="20240106 19:15:26.346"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:15:26.346" endtime="20240106 19:15:26.624"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:26.630" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:15:26.629" endtime="20240106 19:15:27.992"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:28.192" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:27.992" endtime="20240106 19:15:28.192"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:26.629" endtime="20240106 19:15:28.192"/>
+</kw>
+<kw name="Click Button filter" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:28.207" endtime="20240106 19:15:28.289"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:28.292" level="INFO">Clicking element 'xpath://span[normalize-space()='Filter']'.</msg>
+<status status="PASS" starttime="20240106 19:15:28.289" endtime="20240106 19:15:28.373"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:28.637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:28.374" endtime="20240106 19:15:28.637"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:28.207" endtime="20240106 19:15:28.637"/>
+</kw>
+<kw name="Filter by All Status" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:28.637" endtime="20240106 19:15:28.715"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:28.715" level="INFO">Clicking element 'xpath://div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex-fit']'.</msg>
+<status status="PASS" starttime="20240106 19:15:28.715" endtime="20240106 19:15:28.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${semua_status_aktif}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:28.839" level="INFO">Clicking element 'xpath://div[contains(text(),'Semua Status Aktif')]'.</msg>
+<status status="PASS" starttime="20240106 19:15:28.838" endtime="20240106 19:15:28.935"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:29.108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:28.935" endtime="20240106 19:15:29.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:15:31.109" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:15:29.108" endtime="20240106 19:15:31.109"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:28.637" endtime="20240106 19:15:31.109"/>
+</kw>
+<kw name="CLick Button Tampilkan" library="GlobalResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tampilkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:31.109" level="INFO">Clicking element 'xpath://span[normalize-space()='Tampilkan']'.</msg>
+<status status="PASS" starttime="20240106 19:15:31.109" endtime="20240106 19:15:31.629"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:31.808" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:31.629" endtime="20240106 19:15:31.808"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:31.109" endtime="20240106 19:15:31.808"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:15:31.808" endtime="20240106 19:15:35.256"/>
+</kw>
+<doc>This test case verifies that user is able to filter by All status</doc>
+<tag>filter</tag>
+<status status="PASS" starttime="20240106 19:15:17.506" endtime="20240106 19:15:35.256"/>
+</test>
+<test id="s1-t6" name="Verify Berhasil Filter by Status Aktif" line="59">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:15:35.256" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:15:35.256" endtime="20240106 19:15:40.099"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:15:40.100" endtime="20240106 19:15:40.370"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:40.372" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:15:40.371" endtime="20240106 19:15:40.958"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:41.154" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:40.958" endtime="20240106 19:15:41.154"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:40.370" endtime="20240106 19:15:41.154"/>
+</kw>
+<kw name="Click Button filter" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:41.169" endtime="20240106 19:15:41.320"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:41.320" level="INFO">Clicking element 'xpath://span[normalize-space()='Filter']'.</msg>
+<status status="PASS" starttime="20240106 19:15:41.320" endtime="20240106 19:15:41.399"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:41.642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:41.399" endtime="20240106 19:15:41.642"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:41.169" endtime="20240106 19:15:41.642"/>
+</kw>
+<kw name="Filter by Status Aktif" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:41.642" endtime="20240106 19:15:41.693"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:41.693" level="INFO">Clicking element 'xpath://div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex-fit']'.</msg>
+<status status="PASS" starttime="20240106 19:15:41.693" endtime="20240106 19:15:41.776"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_aktif}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:41.776" level="INFO">Clicking element 'xpath://div[@class='w-full'][normalize-space()='Aktif']'.</msg>
+<status status="PASS" starttime="20240106 19:15:41.776" endtime="20240106 19:15:41.870"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:42.031" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:41.870" endtime="20240106 19:15:42.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:15:44.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:15:42.031" endtime="20240106 19:15:44.031"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:41.642" endtime="20240106 19:15:44.031"/>
+</kw>
+<kw name="CLick Button Tampilkan" library="GlobalResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tampilkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:44.031" level="INFO">Clicking element 'xpath://span[normalize-space()='Tampilkan']'.</msg>
+<status status="PASS" starttime="20240106 19:15:44.031" endtime="20240106 19:15:44.514"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:44.758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:44.514" endtime="20240106 19:15:44.758"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:44.031" endtime="20240106 19:15:44.758"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:15:44.758" endtime="20240106 19:15:47.131"/>
+</kw>
+<doc>This test case verifies that user is able to filter by status aktif</doc>
+<tag>filter</tag>
+<status status="PASS" starttime="20240106 19:15:35.256" endtime="20240106 19:15:47.131"/>
+</test>
+<test id="s1-t7" name="Verify Berhasil Filter by Status Non Aktif" line="69">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:15:47.131" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:15:47.131" endtime="20240106 19:15:51.330"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:15:51.330" endtime="20240106 19:15:51.625"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:51.627" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:15:51.627" endtime="20240106 19:15:52.146"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:52.352" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:52.147" endtime="20240106 19:15:52.352"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:51.626" endtime="20240106 19:15:52.352"/>
+</kw>
+<kw name="Click Button filter" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:52.352" endtime="20240106 19:15:52.477"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:52.479" level="INFO">Clicking element 'xpath://span[normalize-space()='Filter']'.</msg>
+<status status="PASS" starttime="20240106 19:15:52.478" endtime="20240106 19:15:52.568"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:52.819" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:52.568" endtime="20240106 19:15:52.819"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:52.352" endtime="20240106 19:15:52.819"/>
+</kw>
+<kw name="Filter by Status Non Aktif" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:15:52.819" endtime="20240106 19:15:52.874"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:52.874" level="INFO">Clicking element 'xpath://div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex-fit']'.</msg>
+<status status="PASS" starttime="20240106 19:15:52.874" endtime="20240106 19:15:52.948"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_non_aktif}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:52.948" level="INFO">Clicking element 'xpath://div[contains(text(),'Non Aktif')]'.</msg>
+<status status="PASS" starttime="20240106 19:15:52.948" endtime="20240106 19:15:53.060"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:53.321" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:53.061" endtime="20240106 19:15:53.321"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:15:55.322" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:15:53.322" endtime="20240106 19:15:55.323"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:52.819" endtime="20240106 19:15:55.323"/>
+</kw>
+<kw name="CLick Button Tampilkan" library="GlobalResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tampilkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:15:55.324" level="INFO">Clicking element 'xpath://span[normalize-space()='Tampilkan']'.</msg>
+<status status="PASS" starttime="20240106 19:15:55.324" endtime="20240106 19:15:55.808"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:15:55.990" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:15:55.808" endtime="20240106 19:15:55.990"/>
+</kw>
+<status status="PASS" starttime="20240106 19:15:55.324" endtime="20240106 19:15:55.990"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:15:55.990" endtime="20240106 19:15:58.337"/>
+</kw>
+<doc>This test case verifies that user is able to filter by status non aktif</doc>
+<tag>filter</tag>
+<status status="PASS" starttime="20240106 19:15:47.131" endtime="20240106 19:15:58.337"/>
+</test>
+<test id="s1-t8" name="Verify Berhasil Mengaktifkan Status" line="79">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:15:58.374" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:15:58.373" endtime="20240106 19:16:03.344"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:16:03.345" endtime="20240106 19:16:03.582"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:03.584" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:16:03.583" endtime="20240106 19:16:04.132"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:04.323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:04.133" endtime="20240106 19:16:04.323"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:03.583" endtime="20240106 19:16:04.339"/>
+</kw>
+<kw name="Click Button filter" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:04.340" endtime="20240106 19:16:04.456"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:04.457" level="INFO">Clicking element 'xpath://span[normalize-space()='Filter']'.</msg>
+<status status="PASS" starttime="20240106 19:16:04.456" endtime="20240106 19:16:04.543"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:04.785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:04.543" endtime="20240106 19:16:04.785"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:04.340" endtime="20240106 19:16:04.785"/>
+</kw>
+<kw name="Filter by Status Non Aktif" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:04.785" endtime="20240106 19:16:04.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:04.840" level="INFO">Clicking element 'xpath://div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex-fit']'.</msg>
+<status status="PASS" starttime="20240106 19:16:04.839" endtime="20240106 19:16:04.916"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_non_aktif}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:04.917" level="INFO">Clicking element 'xpath://div[contains(text(),'Non Aktif')]'.</msg>
+<status status="PASS" starttime="20240106 19:16:04.917" endtime="20240106 19:16:05.050"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:05.209" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:05.050" endtime="20240106 19:16:05.209"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:16:07.211" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:16:05.209" endtime="20240106 19:16:07.211"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:04.785" endtime="20240106 19:16:07.211"/>
+</kw>
+<kw name="CLick Button Tampilkan" library="GlobalResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tampilkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:07.211" level="INFO">Clicking element 'xpath://span[normalize-space()='Tampilkan']'.</msg>
+<status status="PASS" starttime="20240106 19:16:07.211" endtime="20240106 19:16:07.729"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:07.885" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:07.729" endtime="20240106 19:16:07.900"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:07.211" endtime="20240106 19:16:07.900"/>
+</kw>
+<kw name="Mengaktifkan Status" library="GlobalResources">
+<kw name="Log" library="BuiltIn">
+<arg>Element is visible: ${status_off}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240106 19:16:07.900" level="INFO">Element is visible: xpath://span[@id='off-0' and @class='absolute font-medium text-2xs uppercase right-2 text-toggle-off']</msg>
+<status status="PASS" starttime="20240106 19:16:07.900" endtime="20240106 19:16:07.900"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:08.114" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:07.900" endtime="20240106 19:16:08.114"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_off}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:08.115" level="INFO">Clicking element 'xpath://span[@id='off-0' and @class='absolute font-medium text-2xs uppercase right-2 text-toggle-off']'.</msg>
+<status status="PASS" starttime="20240106 19:16:08.114" endtime="20240106 19:16:08.253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Ya_aktifkan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:08.253" endtime="20240106 19:16:08.316"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:08.518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:08.316" endtime="20240106 19:16:08.518"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Ya_aktifkan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:08.518" level="INFO">Clicking button 'xpath://button[normalize-space()='Ya, Aktifkan']'.</msg>
+<status status="PASS" starttime="20240106 19:16:08.518" endtime="20240106 19:16:08.761"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Element is visible: ${status_on}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240106 19:16:08.762" level="INFO">Element is visible: xpath://span[@id='on-0' and @class='absolute font-medium text-2xs uppercase left-2 text-white']</msg>
+<status status="PASS" starttime="20240106 19:16:08.761" endtime="20240106 19:16:08.762"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:08.917" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:08.762" endtime="20240106 19:16:08.917"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:07.900" endtime="20240106 19:16:08.917"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:16:08.917" endtime="20240106 19:16:12.311"/>
+</kw>
+<doc>This test case verifies that user is able to Activate Status</doc>
+<tag>filter</tag>
+<status status="PASS" starttime="20240106 19:15:58.372" endtime="20240106 19:16:12.311"/>
+</test>
+<test id="s1-t9" name="Verify Berhasil Menonaktifkan Status" line="90">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240106 19:16:12.311" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
+<status status="PASS" starttime="20240106 19:16:12.311" endtime="20240106 19:16:16.674"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240106 19:16:16.675" endtime="20240106 19:16:16.856"/>
+</kw>
+<kw name="Click Modul Customer" library="modulCustomerResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${modul_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:16.856" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
+<status status="PASS" starttime="20240106 19:16:16.856" endtime="20240106 19:16:17.456"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:17.671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:17.456" endtime="20240106 19:16:17.671"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:16.856" endtime="20240106 19:16:17.671"/>
+</kw>
+<kw name="Click Button filter" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:17.686" endtime="20240106 19:16:17.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:17.756" level="INFO">Clicking element 'xpath://span[normalize-space()='Filter']'.</msg>
+<status status="PASS" starttime="20240106 19:16:17.756" endtime="20240106 19:16:17.844"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:18.166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:17.844" endtime="20240106 19:16:18.166"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:17.686" endtime="20240106 19:16:18.166"/>
+</kw>
+<kw name="Filter by Status Aktif" library="GlobalResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:18.166" endtime="20240106 19:16:18.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:18.225" level="INFO">Clicking element 'xpath://div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex-fit']'.</msg>
+<status status="PASS" starttime="20240106 19:16:18.225" endtime="20240106 19:16:18.297"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_aktif}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:18.298" level="INFO">Clicking element 'xpath://div[@class='w-full'][normalize-space()='Aktif']'.</msg>
+<status status="PASS" starttime="20240106 19:16:18.297" endtime="20240106 19:16:18.421"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:18.573" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:18.421" endtime="20240106 19:16:18.573"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240106 19:16:20.574" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240106 19:16:18.573" endtime="20240106 19:16:20.574"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:18.166" endtime="20240106 19:16:20.574"/>
+</kw>
+<kw name="CLick Button Tampilkan" library="GlobalResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_tampilkan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:20.574" level="INFO">Clicking element 'xpath://span[normalize-space()='Tampilkan']'.</msg>
+<status status="PASS" starttime="20240106 19:16:20.574" endtime="20240106 19:16:21.050"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:21.222" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:21.050" endtime="20240106 19:16:21.222"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:20.574" endtime="20240106 19:16:21.222"/>
+</kw>
+<kw name="Menonaktifkan Status" library="GlobalResources">
+<kw name="Log" library="BuiltIn">
+<arg>Element is visible: ${status_on}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240106 19:16:21.222" level="INFO">Element is visible: xpath://span[@id='on-0' and @class='absolute font-medium text-2xs uppercase left-2 text-white']</msg>
+<status status="PASS" starttime="20240106 19:16:21.222" endtime="20240106 19:16:21.222"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:21.432" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:21.222" endtime="20240106 19:16:21.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${status_on}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:21.432" level="INFO">Clicking element 'xpath://span[@id='on-0' and @class='absolute font-medium text-2xs uppercase left-2 text-white']'.</msg>
+<status status="PASS" starttime="20240106 19:16:21.432" endtime="20240106 19:16:21.537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Ya_nonaktifkan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240106 19:16:21.538" endtime="20240106 19:16:21.619"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:21.913" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:21.619" endtime="20240106 19:16:21.913"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Ya_nonaktifkan}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240106 19:16:21.913" level="INFO">Clicking button 'xpath://button[@class='close-modal btn-active py-4 px-5 rounded-3xl text-sm mx-2 w-36 flex justify-center items-center' and (text()='Ya, Nonaktifkan')]'.</msg>
+<status status="PASS" starttime="20240106 19:16:21.913" endtime="20240106 19:16:22.373"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Element is visible: ${status_off}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240106 19:16:22.374" level="INFO">Element is visible: xpath://span[@id='off-0' and @class='absolute font-medium text-2xs uppercase right-2 text-toggle-off']</msg>
+<status status="PASS" starttime="20240106 19:16:22.373" endtime="20240106 19:16:22.374"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240106 19:16:22.519" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240106 19:16:22.374" endtime="20240106 19:16:22.519"/>
+</kw>
+<status status="PASS" starttime="20240106 19:16:21.222" endtime="20240106 19:16:22.519"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240106 19:16:22.519" endtime="20240106 19:16:25.441"/>
+</kw>
+<doc>This test case verifies that user is able to Unactivate Status</doc>
+<tag>filter</tag>
+<status status="PASS" starttime="20240106 19:16:12.311" endtime="20240106 19:16:25.441"/>
+</test>
+<doc>modul customer</doc>
+<status status="FAIL" starttime="20240106 19:14:08.270" endtime="20240106 19:16:25.441"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">add</stat>
+<stat pass="1" fail="0" skip="0">delete</stat>
+<stat pass="5" fail="0" skip="0">filter</stat>
+<stat pass="1" fail="0" skip="0">show</stat>
+</tag>
+<suite>
+<stat pass="7" fail="2" skip="0" id="s1" name="ModulCustomer">ModulCustomer</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

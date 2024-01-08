@@ -23,6 +23,30 @@ Verify Successful Create Data Group Dengan Tambah Data Customer
     Click Button Simpan
     Verify Berhasil Create
     Close Browser
+Verify Successful Menambahkan data customer pada existing group
+    [documentation]  This test case verifies that user is able to  menambahkan data customer pada existing group
+    [tags]  add
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Edit Existing Group
+    Tambah Existing Group
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
+Verify Successful delete data customer pada existing group
+    [documentation]  This test case verifies that user is able to delete data customer pada existing group
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Edit Existing Group
+    Delete Existing Group
+    Click Button Ya,Hapus
+    Verify Berhasil Delete Existing
+    Click Button Update
+    Verify Berhasil Edit
+    Close Browser
 Verify Successful Delete Data Group
     [documentation]  This test case verifies that user is able to delete data group
     [tags]  delete
@@ -122,3 +146,4 @@ Verify Berhasil Menonaktifkan Status
     CLick Button Tampilkan
     Menonaktifkan Status
     Close Browser
+*** Keywords ***

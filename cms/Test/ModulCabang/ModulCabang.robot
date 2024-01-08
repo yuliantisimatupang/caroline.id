@@ -171,4 +171,21 @@ Verify Berhasil Menonaktifkan Status
     CLick Button Tampilkan
     Menonaktifkan Status
     Close Browser
+Verify Menampilkan List Data Sesuai dengan Size Table yang dipilih
+    [documentation]  This test case verifies that list data sesuai dengan size table yang dipilih
+    [tags]  table
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Cabang
+    Pilih Size Table
+    Verify List Data
+    Close Browser
+Verify Memastikan ketika pindah pagination data sesuai
+    [documentation]  This test case verifies ketika pindah pagination data sesuai
+    [tags]  page
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Cabang
+    Verify Page Transition
+    Close Browser
 *** Keywords ***
