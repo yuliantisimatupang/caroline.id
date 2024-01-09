@@ -20,3 +20,5 @@ edit_kode_group="xpath://div[@blocker-target='cancel-edit-modal']//div//div//div
 edit_nama_group="xpath://div[@blocker-target='cancel-edit-modal']//div//div//div//input[@name='name']"
 delete_dari_view="xpath://button[contains(@class,'delete-btn modal-button btn-grey p-3 rounded-full w-12 h-12 ml-3 flex justify-center items-center cursor-pointer hover:text-danger')]//*[name()='svg']"
 ya_hapus_view="xpath://div[@class='delete-modal-confirmation']//div[1]//div[4]//button[1]"
+input_filter_kode_group="id:filter-code-value"
+input_filter_nama_group="id:filter-name-value"

@@ -100,3 +100,9 @@ Delete Group dari View Detail
 Click Ya Hapus dari View
     Wait Until Element Is Visible  ${ya_hapus_view}  timeout=10s
     Click Element  ${ya_hapus_view}
+Filter By Kode Group
+    Wait Until Element Is Visible  ${input_filter_kode_group}  timeout=10s
+    Input Text  ${input_filter_kode_group}  ${filter_kode_group}
+Filter By Nama Group
+    Wait Until Element Is Visible  ${input_filter_nama_group}  timeout=10s
+    Input Text  ${input_filter_nama_group}  ${filter_nama_group}

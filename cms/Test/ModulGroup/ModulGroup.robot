@@ -101,25 +101,6 @@ Verify Successful Edit Group dari View Detail
     Click Button Update
     Verify Berhasil Edit
     Close Browser
-Verify Successful Delete Group dari View Detail 
-    [documentation]  This test case verifies that user is able to delete group dari view detail
-    [tags]  delete
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Group
-    Delete Group dari View Detail
-    Click Ya Hapus dari View
-    Verify Berhasil Delete
-    Close Browser
-Verify Successful Delete Data Group
-    [documentation]  This test case verifies that user is able to delete data group
-    [tags]  delete
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Group
-    Click Button Delete Group
-    Verify Berhasil Delete
-    Close Browser
 Verify Successful View Detail Data Group
     [documentation]  This test case verifies that user is able to view detail data group
     [tags]  view
@@ -189,6 +170,38 @@ Verify Berhasil Filter by Status Non Aktif
     Filter by Status Non Aktif
     CLick Button Tampilkan
     Close Browser
+Verify Berhasil Filter by Kode Group
+    [documentation]  This test case verifies that user is able to filter by kode group
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter By Kode Group
+    CLick Button Tampilkan
+    Close Browser
+Verify Berhasil Filter by Nama Group
+    [documentation]  This test case verifies that user is able to filter by nama group
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter By Nama Group
+    CLick Button Tampilkan
+    Close Browser
+Verify Berhasil Filter by Semua Status + Kode Group + Nama Group
+    [documentation]  This test case verifies that user is able to filter by Semua Status + Kode Group + Nama Group
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter by All Status
+    Filter By Kode Group
+    Filter By Nama Group
+    CLick Button Tampilkan
+    Close Browser
 Verify Berhasil Menonaktifkan Status
     [documentation]  This test case verifies that user is able to Unactivate Status
     [tags]  filter
@@ -200,6 +213,18 @@ Verify Berhasil Menonaktifkan Status
     CLick Button Tampilkan
     Menonaktifkan Status
     Close Browser
+Verify Berhasil Filter by Status Non Aktif + Kode Group + Nama Group
+    [documentation]  This test case verifies that user is able to filter by Status Non Aktif + Kode Group + Nama Group
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter by Status Non Aktif
+    Filter By Kode Group
+    Filter By Nama Group
+    CLick Button Tampilkan
+    Close Browser
 Verify Berhasil Mengaktifkan Status
     [documentation]  This test case verifies that user is able to Activate Status
     [tags]  filter
@@ -210,6 +235,18 @@ Verify Berhasil Mengaktifkan Status
     Filter by Status Non Aktif
     CLick Button Tampilkan
     Mengaktifkan Status
+    Close Browser
+Verify Berhasil Filter by Status Aktif + Kode Group + Nama Group
+    [documentation]  This test case verifies that user is able to filter by Status Aktif + Kode Group + Nama Group
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button filter
+    Filter by Status Aktif
+    Filter By Kode Group
+    Filter By Nama Group
+    CLick Button Tampilkan
     Close Browser
 Verify Berhasil Menonaktifkan Status dari View
     [documentation]  This test case verifies that user is able to Unactivate Status
@@ -237,4 +274,40 @@ Verify Berhasil Mengaktifkan Status dari View
     Switch Status
     Aktifkan Status
     Close Browser
+Verify Successful Search by Simbol
+    [documentation]  This test case verifies when user Search by Simbol Nothing Data Present
+    [tags]  search
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Search By Simbol
+    Close Browser
+Verify Search Blank search
+    [documentation]  This test case verifies when search with blank search nothing happen
+    [tags]  search
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Search Blank search
+    Close Browser
+Verify Successful Delete Group dari View Detail 
+    [documentation]  This test case verifies that user is able to delete group dari view detail
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Delete Group dari View Detail
+    Click Ya Hapus dari View
+    Verify Berhasil Delete
+    Close Browser
+Verify Successful Delete Data Group
+    [documentation]  This test case verifies that user is able to delete data group
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Group
+    Click Button Delete Group
+    Verify Berhasil Delete
+    Close Browser
+
 *** Keywords ***
