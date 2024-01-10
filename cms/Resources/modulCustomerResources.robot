@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 Library    DateTime
 Library    OperatingSystem
+Library    BuiltIn
 Variables  ../Locators/LocatorCustomer.py
 Variables  ../Locators/LocatorGlobal.py
 Variables  ../TestData/TestdataCustomer.py
@@ -33,12 +34,15 @@ Input Fields Customer
     Input Text   ${input_alamat}  ${alamat}
     Input Text   ${input_no_ktp}  ${no_ktp}
     Input Text   ${input_no_npwp}  ${no_npwp}
-    Wait Until Element Is Enabled  ${upload_ktp}
-    ${file_contents}=    Run Keyword And Ignore Error    Get File    ${EXECDIR}/cms/Test/ModulCustomer/Test.png    encoding=UTF-8
+    Wait Until Element Is Visible  ${upload_ktp}
     #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
-    #${file_path}    Get File    ${IMAGE_PATH}  
+    #${file_path}    Get File    ${CURDIR}${/}${file_ktp}  
     #Click Element  ${upload_ktp}
-    Choose File  ${upload_ktp}  ${file_contents}
+    ${image_data}    Set Variable    ${EMPTY}
+    ${file_path}    Set Variable    ${file_ktp}  # Replace with your image file path
+    Run Keyword And Continue On Failure    Read Binary File   ${file_path}    ${image_data}
+    Log    Image Data: ${image_data}
+    Choose File  ${upload_ktp}  ${file_path}
     #Choose File  ${upload_npwp}  ${file_npwp}
     Capture Page Screenshot
     Scroll Element Into View  ${button_selanjutnya}

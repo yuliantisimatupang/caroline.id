@@ -41,12 +41,6 @@ Click Button Delete Group
     Click Element  ${button_delete}
     Capture Page Screenshot
     Click Element  ${YaHapus_group}
-View Data Group
-    Click Element  ${button_view}
-    Capture Page Screenshot
-Click Button Kembali
-    Click Element  ${button_kembali}
-    Capture Page Screenshot
 Edit Existing Group
     Click Element  ${button_view}
     Capture Page Screenshot
@@ -91,15 +85,6 @@ Input Edit Nama Group
     Click Element  ${edit_nama_group}
     Clear Element Text  ${edit_nama_group}
     Input Text  ${edit_nama_group}  ${nama_group_edit}  ${random_text}
-Delete Group dari View Detail
-    Click Element  ${button_view}
-    Capture Page Screenshot
-    Wait Until Element Is Visible  ${delete_dari_view}  timeout=10s
-    Click Element  ${delete_dari_view}
-    Capture Page Screenshot
-Click Ya Hapus dari View
-    Wait Until Element Is Visible  ${ya_hapus_view}  timeout=10s
-    Click Element  ${ya_hapus_view}
 Filter By Kode Group
     Wait Until Element Is Visible  ${input_filter_kode_group}  timeout=10s
     Input Text  ${input_filter_kode_group}  ${filter_kode_group}

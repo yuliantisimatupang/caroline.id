@@ -37,14 +37,14 @@ Verify tidak dapat create Customer dengan blank all field
     Click Button Ya Simpan
     Verify Terjadi Kesalahan
     Close Browser
-Verify Successful Delete Data Customer
-    [documentation]  This test case verifies that user is able to delete data customer
-    [tags]  delete
+Verify Blank filter
+    [documentation]  This test case verifies that user is able to Blank filter 
+    [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul Customer
-    Click Button Delete Customer
-    Verify Berhasil Delete
+    Click Button filter
+    CLick Button Tampilkan
     Close Browser
 Verify Berhasil Filter by All Status
     [documentation]  This test case verifies that user is able to filter by All status
@@ -76,6 +76,15 @@ Verify Berhasil Filter by Status Non Aktif
     Filter by Status Non Aktif
     CLick Button Tampilkan
     Close Browser
+Verify Successful View Detail Data Customer
+    [documentation]  This test case verifies that user is able to view detail data customer
+    [tags]  view
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    View Data
+    Click Button Kembali
+    Close Browser
 Verify Berhasil Mengaktifkan Status
     [documentation]  This test case verifies that user is able to Activate Status
     [tags]  filter
@@ -87,6 +96,32 @@ Verify Berhasil Mengaktifkan Status
     CLick Button Tampilkan
     Mengaktifkan Status
     Close Browser
+Verify Berhasil Menonaktifkan Status dari View
+    [documentation]  This test case verifies that user is able to Unactivate Status
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Click Button filter
+    Filter by Status Aktif
+    CLick Button Tampilkan
+    View Data
+    Switch Status
+    Nonaktifkan Status
+    Close Browser
+Verify Berhasil Mengaktifkan Status dari View
+    [documentation]  This test case verifies that user is able to Activate Status from view
+    [tags]  filter
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Click Button filter
+    Filter by Status Non Aktif
+    CLick Button Tampilkan
+    View Data
+    Switch Status
+    Aktifkan Status
+    Close Browser
 Verify Berhasil Menonaktifkan Status
     [documentation]  This test case verifies that user is able to Unactivate Status
     [tags]  filter
@@ -97,5 +132,40 @@ Verify Berhasil Menonaktifkan Status
     Filter by Status Aktif
     CLick Button Tampilkan
     Menonaktifkan Status
+    Close Browser
+Verify Successful Search by Simbol
+    [documentation]  This test case verifies when user Search by Simbol Nothing Data Present
+    [tags]  search
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Search By Simbol
+    Close Browser
+Verify Search Blank search
+    [documentation]  This test case verifies when search with blank search nothing happen
+    [tags]  search
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Search Blank search
+    Close Browser
+Verify Successful Delete Data Customer dari list
+    [documentation]  This test case verifies that user is able to delete data customer dari list
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Click Button Delete Customer
+    Verify Berhasil Delete
+    Close Browser
+Verify Successful Delete Group dari View Detail 
+    [documentation]  This test case verifies that user is able to delete group dari view detail
+    [tags]  delete
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Delete dari View Detail
+    Click Ya Hapus dari View
+    Verify Berhasil Delete
     Close Browser
 *** Keywords ***

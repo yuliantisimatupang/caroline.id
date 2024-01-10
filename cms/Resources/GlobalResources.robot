@@ -125,3 +125,18 @@ Verify Page Transition
 Click Button Ya,Hapus
     Wait Until Element Is Visible  ${Ya_hapus}  timeout=10s
     Click Element  ${Ya_hapus} 
+View Data
+    Click Element  ${button_view}
+    Capture Page Screenshot
+Click Button Kembali
+    Click Element  ${button_kembali}
+    Capture Page Screenshot
+Delete dari View Detail
+    Click Element  ${button_view}
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${delete_dari_view}  timeout=10s
+    Click Element  ${delete_dari_view}
+    Capture Page Screenshot
+Click Ya Hapus dari View
+    Wait Until Element Is Visible  ${ya_hapus_view}  timeout=10s
+    Click Element  ${ya_hapus_view}

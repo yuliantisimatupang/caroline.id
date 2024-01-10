@@ -107,7 +107,7 @@ Verify Successful View Detail Data Group
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul Group
-    View Data Group
+    View Data
     Click Button Kembali
     Close Browser
 Verify Create Data Group Tanpa Data Customer
@@ -257,7 +257,7 @@ Verify Berhasil Menonaktifkan Status dari View
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
-    View Data Group
+    View Data
     Switch Status
     Nonaktifkan Status
     Close Browser
@@ -270,7 +270,7 @@ Verify Berhasil Mengaktifkan Status dari View
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
-    View Data Group
+    View Data
     Switch Status
     Aktifkan Status
     Close Browser
@@ -296,7 +296,7 @@ Verify Successful Delete Group dari View Detail
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul Group
-    Delete Group dari View Detail
+    Delete dari View Detail
     Click Ya Hapus dari View
     Verify Berhasil Delete
     Close Browser
@@ -309,5 +309,4 @@ Verify Successful Delete Data Group
     Click Button Delete Group
     Verify Berhasil Delete
     Close Browser
-
 *** Keywords ***
