@@ -1,435 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240111 00:22:33.866" rpa="false" schemaversion="4">
-<suite id="s1" name="ModulCustomer" source="c:\Users\Risnawati\Downloads\JBA\cms\Test\ModulCustomer\ModulCustomer.robot">
-<test id="s1-t1" name="Verify Successful Create Data Customer" line="15">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240113 23:28:12.341" rpa="false" schemaversion="4">
+<suite id="s1" name="Homepage" source="c:\Users\Risnawati\Downloads\JBA\web\Test\Homepag\Homepage.robot">
+<test id="s1-t1" name="Verify Successful Show Unit Rekomendasi" line="197">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240111 00:22:34.750" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-cms-dev.aslcode.dev/branches'.</msg>
-<status status="PASS" starttime="20240111 00:22:34.750" endtime="20240111 00:22:45.322"/>
+<msg timestamp="20240113 23:28:13.137" level="INFO">Opening browser 'Chrome' to base url 'https://jba-aaas-web-dev.aslcode.dev/'.</msg>
+<status status="PASS" starttime="20240113 23:28:13.137" endtime="20240113 23:28:19.302"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240111 00:22:45.322" endtime="20240111 00:22:45.555"/>
+<status status="PASS" starttime="20240113 23:28:19.318" endtime="20240113 23:28:19.936"/>
 </kw>
-<kw name="Click Modul Customer" library="modulCustomerResources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${modul_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:45.560" level="INFO">Clicking element 'xpath://span[@class='ml-2'][normalize-space()='Customer']'.</msg>
-<status status="PASS" starttime="20240111 00:22:45.558" endtime="20240111 00:22:46.287"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240111 00:22:46.525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240111 00:22:46.287" endtime="20240111 00:22:46.525"/>
-</kw>
-<status status="PASS" starttime="20240111 00:22:45.557" endtime="20240111 00:22:46.525"/>
-</kw>
-<kw name="Click Button Create Customer" library="modulCustomerResources">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${button_create}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240111 00:22:46.537" endtime="20240111 00:22:46.626"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${button_create}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:46.626" level="INFO">Clicking button 'xpath://button[@class='btn-active py-3 px-4 rounded-3xl flex items-center justify-center text-xs modal-button create-button']'.</msg>
-<status status="PASS" starttime="20240111 00:22:46.626" endtime="20240111 00:22:46.843"/>
-</kw>
-<status status="PASS" starttime="20240111 00:22:46.535" endtime="20240111 00:22:46.843"/>
-</kw>
-<kw name="Input Fields Customer" library="modulCustomerResources">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_customer_jba}</arg>
-<arg>${no_customer_jba}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:46.937" level="INFO">Typing text '0101' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Customer JBA']'.</msg>
-<status status="PASS" starttime="20240111 00:22:46.937" endtime="20240111 00:22:47.258"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_pilih_tipe_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:47.268" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-customer-type']//div'.</msg>
-<status status="PASS" starttime="20240111 00:22:47.258" endtime="20240111 00:22:47.424"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${tipe_customer_perorang}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:47.433" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Perorangan')]'.</msg>
-<status status="PASS" starttime="20240111 00:22:47.424" endtime="20240111 00:22:47.553"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_pilih_membership}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:47.566" level="INFO">Clicking element '//div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-membership-id']//div'.</msg>
-<status status="PASS" starttime="20240111 00:22:47.553" endtime="20240111 00:22:47.690"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${membership_regular}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:47.690" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div//div[contains(text(),'REGULAR')]'.</msg>
-<status status="PASS" starttime="20240111 00:22:47.690" endtime="20240111 00:22:47.837"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_nama_depan}</arg>
-<arg>${nama_depan}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:47.837" level="INFO">Typing text 'Testing' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Nama Depan']'.</msg>
-<status status="PASS" starttime="20240111 00:22:47.837" endtime="20240111 00:22:48.199"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_nama_belakang}</arg>
-<arg>${nama_belakang}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:48.199" level="INFO">Typing text 'Automation' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Nama Belakang']'.</msg>
-<status status="PASS" starttime="20240111 00:22:48.199" endtime="20240111 00:22:48.500"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_ponsel}</arg>
-<arg>${no_ponsel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:48.500" level="INFO">Typing text '087791234324' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Ponsel']'.</msg>
-<status status="PASS" starttime="20240111 00:22:48.500" endtime="20240111 00:22:48.757"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:48.757" level="INFO">Typing text 'caca@gmail.com' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Email']'.</msg>
-<status status="PASS" starttime="20240111 00:22:48.757" endtime="20240111 00:22:49.004"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_ponsel}</arg>
-<arg>${no_ponsel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:49.004" level="INFO">Typing text '087791234324' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No Ponsel']'.</msg>
-<status status="PASS" starttime="20240111 00:22:49.004" endtime="20240111 00:22:49.253"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_tempat_lahir}</arg>
-<arg>${tempat_lahir}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:49.253" level="INFO">Typing text 'Jakarta' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Tempat Lahir']'.</msg>
-<status status="PASS" starttime="20240111 00:22:49.253" endtime="20240111 00:22:49.549"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_tanggal_lahir}</arg>
-<arg>${tanggal_lahir}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:49.551" level="INFO">Typing text '12121999' into text field 'xpath://div[contains(@blocker-target,'cancel-add-modal')]//div//div//div//div//div//form//div[contains(@name,'content-section-0')]//div//div//div//input[contains(@name,'birthDate')]'.</msg>
-<status status="PASS" starttime="20240111 00:22:49.549" endtime="20240111 00:22:49.754"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240111 00:22:49.936" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240111 00:22:49.754" endtime="20240111 00:22:49.936"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_jenis_kelamin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:49.936" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-value='form-gender']//div'.</msg>
-<status status="PASS" starttime="20240111 00:22:49.936" endtime="20240111 00:22:50.062"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${wanita}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:50.062" level="INFO">Clicking element 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Wanita')]'.</msg>
-<status status="PASS" starttime="20240111 00:22:50.062" endtime="20240111 00:22:50.175"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_nama_kota}</arg>
-<arg>${kota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:50.175" level="INFO">Typing text 'Jakarta' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Kota']'.</msg>
-<status status="PASS" starttime="20240111 00:22:50.175" endtime="20240111 00:22:50.470"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_alamat}</arg>
-<arg>${alamat}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:50.470" level="INFO">Typing text 'jl.kemang no 31' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Alamat']'.</msg>
-<status status="PASS" starttime="20240111 00:22:50.470" endtime="20240111 00:22:50.967"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_ktp}</arg>
-<arg>${no_ktp}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:50.967" level="INFO">Typing text '5171032103720031' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No KTP']'.</msg>
-<status status="PASS" starttime="20240111 00:22:50.967" endtime="20240111 00:22:51.369"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_npwp}</arg>
-<arg>${no_npwp}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240111 00:22:51.369" level="INFO">Typing text '044055066100000' into text field 'xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No NPWP']'.</msg>
-<status status="PASS" starttime="20240111 00:22:51.369" endtime="20240111 00:22:51.675"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${upload_ktp}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240111 00:22:51.675" endtime="20240111 00:22:51.752"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${image_data}</var>
-<arg>${EMPTY}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240111 00:22:51.752" level="INFO">${image_data} = </msg>
-<status status="PASS" starttime="20240111 00:22:51.752" endtime="20240111 00:22:51.752"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${file_path}</var>
-<arg>${file_ktp}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240111 00:22:51.752" level="INFO">${file_path} = /../../DataFiles/Test.png</msg>
-<status status="PASS" starttime="20240111 00:22:51.752" endtime="20240111 00:22:51.752"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Read Binary File</arg>
-<arg>${file_path}</arg>
-<arg>${image_data}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Read Binary File">
-<arg>${file_path}</arg>
-<arg>${image_data}</arg>
-<msg timestamp="20240111 00:22:51.768" level="FAIL">No keyword with name 'Read Binary File' found. Did you mean:
-    OperatingSystem.Create Binary File</msg>
-<status status="FAIL" starttime="20240111 00:22:51.752" endtime="20240111 00:22:51.768"/>
-</kw>
-<status status="FAIL" starttime="20240111 00:22:51.752" endtime="20240111 00:22:51.768"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Image Data: ${image_data}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240111 00:22:51.768" level="INFO">Image Data: </msg>
-<status status="PASS" starttime="20240111 00:22:51.768" endtime="20240111 00:22:51.768"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>${upload_ktp}</arg>
-<arg>${file_path}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20240111 00:22:51.768" level="INFO">Sending C:\DataFiles\Test.png to browser.</msg>
-<msg timestamp="20240111 00:22:52.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240111 00:22:52.061" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=120.0.6099.199)
-Stacktrace:
-	GetHandleVerifier [0x00007FF697372142+3514994]
-	(No symbol) [0x00007FF696F90CE2]
-	(No symbol) [0x00007FF696E374C3]
-	(No symbol) [0x00007FF696E7B6D7]
-	(No symbol) [0x00007FF696E7A03E]
-	(No symbol) [0x00007FF696EA5FEA]
-	(No symbol) [0x00007FF696E763B6]
-	(No symbol) [0x00007FF696EA6490]
-	(No symbol) [0x00007FF696EC28F6]
-	(No symbol) [0x00007FF696EA5D93]
-	(No symbol) [0x00007FF696E74BDC]
-	(No symbol) [0x00007FF696E75C64]
-	GetHandleVerifier [0x00007FF69739E16B+3695259]
-	GetHandleVerifier [0x00007FF6973F6737+4057191]
-	GetHandleVerifier [0x00007FF6973EE4E3+4023827]
-	GetHandleVerifier [0x00007FF6970C04F9+689705]
-	(No symbol) [0x00007FF696F9C048]
-	(No symbol) [0x00007FF696F98044]
-	(No symbol) [0x00007FF696F981C9]
-	(No symbol) [0x00007FF696F888C4]
-	BaseThreadInitThunk [0x00007FFAAC337344+20]
-	RtlUserThreadStart [0x00007FFAAD5626B1+33]
-</msg>
-<status status="FAIL" starttime="20240111 00:22:51.768" endtime="20240111 00:22:52.061"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
-</kw>
+<kw name="Unit Rekomendasi" library="HomepageResources">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${button_selanjutnya}</arg>
+<arg>${unit_rekomendasi}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
+<status status="PASS" starttime="20240113 23:28:19.953" endtime="20240113 23:28:20.572"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_selanjutnya}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_nama_bank}</arg>
-<arg>${nama_bank}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_cabang_bank}</arg>
-<arg>${cabang_bank}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_no_rekening}</arg>
-<arg>${no_rekening}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_catatan}</arg>
-<arg>${Catatan}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240113 23:28:23.574" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240113 23:28:20.572" endtime="20240113 23:28:23.574"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
+<msg timestamp="20240113 23:28:23.785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-164.png"&gt;&lt;img src="selenium-screenshot-164.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240113 23:28:23.574" endtime="20240113 23:28:23.785"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${button_selanjutnya}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(document.body.scrollWidth, 0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240113 23:28:23.801" level="INFO">Executing JavaScript:
+window.scrollTo(document.body.scrollWidth, 0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240113 23:28:23.801" endtime="20240113 23:28:23.834"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240113 23:28:26.835" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240113 23:28:23.834" endtime="20240113 23:28:26.835"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240113 23:28:27.085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-165.png"&gt;&lt;img src="selenium-screenshot-165.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240113 23:28:26.835" endtime="20240113 23:28:27.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_selengkapnya_unit}</arg>
 <arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.061" endtime="20240111 00:22:52.061"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240113 23:28:27.085" endtime="20240113 23:28:27.152"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_selanjutnya2}</arg>
+<arg>${icon_selengkapnya_unit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
+<msg timestamp="20240113 23:28:27.152" level="INFO">Clicking element 'xpath://button[@aria-label='next-unit']'.</msg>
+<status status="PASS" starttime="20240113 23:28:27.152" endtime="20240113 23:28:27.441"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_tujuan_beli}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${digunakan_sendiri}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_sumber_dana}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${gaji_upah}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_transaksi_untuk}</arg>
-<arg>${transaksi_untuk}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${input_jenis_kendaraan}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${niaga}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_other1}</arg>
-<arg>${other}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_other2}</arg>
-<arg>${other}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_other3}</arg>
-<arg>${other}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_other4}</arg>
-<arg>${other}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_other5}</arg>
-<arg>${other}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${status_on_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240113 23:28:30.443" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240113 23:28:27.441" endtime="20240113 23:28:30.443"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.076" endtime="20240111 00:22:52.076"/>
+<msg timestamp="20240113 23:28:30.653" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-166.png"&gt;&lt;img src="selenium-screenshot-166.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240113 23:28:30.443" endtime="20240113 23:28:30.653"/>
 </kw>
-<status status="FAIL" starttime="20240111 00:22:46.937" endtime="20240111 00:22:52.076"/>
-</kw>
-<kw name="Click Button Simpan" library="GlobalResources">
-<status status="NOT RUN" starttime="20240111 00:22:52.108" endtime="20240111 00:22:52.108"/>
-</kw>
-<kw name="Click Button Ya Simpan" library="modulCustomerResources">
-<status status="NOT RUN" starttime="20240111 00:22:52.108" endtime="20240111 00:22:52.119"/>
-</kw>
-<kw name="Verify Berhasil Create" library="GlobalResources">
-<status status="NOT RUN" starttime="20240111 00:22:52.119" endtime="20240111 00:22:52.119"/>
+<status status="PASS" starttime="20240113 23:28:19.953" endtime="20240113 23:28:30.653"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20240111 00:22:52.119" endtime="20240111 00:22:52.119"/>
+<status status="PASS" starttime="20240113 23:28:30.685" endtime="20240113 23:28:34.097"/>
 </kw>
-<doc>This test case verifies that user is able to create new customer</doc>
-<tag>add</tag>
-<status status="FAIL" starttime="20240111 00:22:34.726" endtime="20240111 00:22:52.119">Several failures occurred:
-
-1) No keyword with name 'Read Binary File' found. Did you mean:
-    OperatingSystem.Create Binary File
-
-2) ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=120.0.6099.199)
-Stacktrace:
-	GetHandleVerifier [0x00007FF697372142+3514994]
-	(No symbol) [0x00007FF696F90CE2]
-	(No symbol) [0x00007FF696E374C3]
-	(No symbol) [0x00007FF696E7B6D7]
-	(No symbol) [0x00007FF696E7A03E]
-	(No symbol) [0x00007FF696EA5FEA]
-	(No symbol) [0x00007FF696E763B6]
-	(No symbol) [0x00007FF696EA6490]
-	(No symbol) [0x00007FF696EC28F6]
-	(No symbol) [0x00007FF696EA5D93]
-	(No symbol) [0x00007FF696E74BDC]
-	(No symbol) [0x00007FF696E75C64]
-	GetHandleVerifier [0x00007FF69739E16B+3695259]
-	GetHandleVerifier [0x00007FF6973F6737+4057191]
-	GetHandleVerifier [0x00007FF6973EE4E3+4023827]
-	GetHandleVerifier [0x00007FF6970C04F9+689705]
-	(No symbol) [0x00007FF696F9C048]
-	(No symbol) [0x00007FF696F98044]
-	(No symbol) [0x00007FF696F981C9]
-	(No symbol) [0x00007FF696F888C4]
-	BaseThreadInitThunk [0x00007FFAAC337344+20]
-	RtlUserThreadStart [0x00007FFAAD5626B1+33]
-</status>
+<doc>This test case verifies Successful Show Unit Rekomendasi</doc>
+<tag>show</tag>
+<status status="PASS" starttime="20240113 23:28:13.118" endtime="20240113 23:28:34.097"/>
 </test>
-<doc>modul customer</doc>
-<status status="FAIL" starttime="20240111 00:22:33.874" endtime="20240111 00:22:52.345"/>
+<doc>Homepage Web JBA</doc>
+<status status="PASS" starttime="20240113 23:28:12.357" endtime="20240113 23:28:34.097"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">add</stat>
+<stat pass="1" fail="0" skip="0">show</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="ModulCustomer">ModulCustomer</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homepage">Homepage</stat>
 </suite>
 </statistics>
 <errors>

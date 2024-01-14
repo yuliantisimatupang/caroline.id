@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Library    DateTime
 Library    OperatingSystem
-Library    BuiltIn
 Variables  ../Locators/LocatorCustomer.py
 Variables  ../Locators/LocatorGlobal.py
 Variables  ../TestData/TestdataCustomer.py
@@ -36,13 +35,12 @@ Input Fields Customer
     Input Text   ${input_no_npwp}  ${no_npwp}
     Wait Until Element Is Visible  ${upload_ktp}
     #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
-    #${file_path}    Get File    ${CURDIR}${/}${file_ktp}  
     #Click Element  ${upload_ktp}
-    ${image_data}    Set Variable    ${EMPTY}
-    ${file_path}    Set Variable    ${file_ktp}  # Replace with your image file path
-    Run Keyword And Continue On Failure    Read Binary File   ${file_path}    ${image_data}
-    Log    Image Data: ${image_data}
-    Choose File  ${upload_ktp}  ${file_path}
+    #${file_contents}=    Run Keyword And Ignore Error    Get File    ${EXECDIR}/cms/Test/ModulCustomer/Test.png    encoding=UTF-8
+    #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
+    #${file_path}    Get File    ${IMAGE_PATH}  
+    #Click Element  ${upload_ktp}
+    Choose File  ${upload_ktp}  ${EXECDIR}\cms\Test\ModulCustomer\Test.png
     #Choose File  ${upload_npwp}  ${file_npwp}
     Capture Page Screenshot
     Scroll Element Into View  ${button_selanjutnya}
@@ -82,12 +80,65 @@ Click Button Selanjutnya Page 1
     Click Element  ${button_selanjutnya}
 Click Button Selanjutnya Page 2
     Click Element  ${button_selanjutnya2}
+Export Customer CSV
+    Click Element   ${icon_export}
+    Wait Until Element Is Visible  ${dropdown_pilih_format}  timeout=10s
+    Capture Page Screenshot
+    Click Element   ${dropdown_pilih_format}
+    Wait Until Element Is Visible  ${file_csv}  timeout=10s
+    Click Element   ${file_csv}
+    Capture Page Screenshot
+    Click Element   ${button_export}
+    Capture Page Screenshot
+    Sleep  3s
+    Capture Page Screenshot
+Export Customer PDF
+    Click Element   ${icon_export}
+    Wait Until Element Is Visible  ${dropdown_pilih_format}  timeout=10s
+    Capture Page Screenshot
+    Click Element   ${dropdown_pilih_format}
+    Wait Until Element Is Visible  ${file_pdf}  timeout=10s
+    Click Element   ${file_pdf}
+    Capture Page Screenshot
+    Click Element   ${button_export}
+    Capture Page Screenshot
+    Sleep  3s
+    Capture Page Screenshot
+Export Customer Excel
+    Click Element   ${icon_export}
+    Wait Until Element Is Visible  ${dropdown_pilih_format}  timeout=10s
+    Capture Page Screenshot
+    Click Element   ${dropdown_pilih_format}
+    Wait Until Element Is Visible  ${file_excel}  timeout=10s
+    Click Element   ${file_excel}
+    Capture Page Screenshot
+    Click Element   ${button_export}
+    Capture Page Screenshot
+    Sleep  3s
+    Capture Page Screenshot
+Verify Text Not Present Test
+    ${text_found}=    Run Keyword And Return Status    Wait Until Page Contains    ${TEXT_TO_NOT_CONTAIN}    10s
+    Run Keyword Unless    ${text_found}    Log    Text '${TEXT_TO_NOT_CONTAIN}' is not present on the page
+    Run Keyword If    ${text_found}    Fail    Text '${TEXT_TO_NOT_CONTAIN}' is present on the page
+    Close Browser
+Download format template CSV
+    Click Element   ${icon_download}
+    Wait Until Element Is Visible  ${download_csv}  timeout=10s
+    Capture Page Screenshot
+    Click Element   ${download_csv}
+    Capture Page Screenshot
+    Sleep  3s
+    Capture Page Screenshot
+Resend Password Customer
+    Wait Until Element Is Visible  ${icon_resend_password}  timeout=10s
+    Capture Page Screenshot
+    Click Element   ${icon_resend_password}
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${ya_mengerti_resend}  timeout=10s
+    Click Element  ${ya_mengerti_resend}
+    Capture Page Screenshot
+View Data Customer
+    Click Element  ${button_view_customer}
+    Capture Page Screenshot
 
-
-
-
-
-
-
-
-
+    

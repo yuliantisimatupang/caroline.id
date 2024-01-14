@@ -1,0 +1,16 @@
+#Homepage
+input_cari_merek_model="xpath://input[@id='headlessui-combobox-input-:R4r5pltsdt4da:']"
+button_cari="xpath://button[@type='submit']"
+input_cari_lokasi="xpath://input[@id='headlessui-combobox-input-:R4r59ltsdt4da:']"
+checkbox_lokasi="xpath://input[@type='checkbox']"
+input_date="xpath://input[@placeholder='Jadwal lelang']"
+input_harga="xpath://div[@class='bg-white p-3 rounded-md flex items-center gap-3']"
+input_dari_harga="xpath://input[@placeholder='0']"
+input_sampai_harga="xpath://input[@placeholder='1.000.000.000']"
+lelang_motor="xpath://div[@class='flex flex-row pb-2 space-x-10']//label[@for='4f0304b7-78cf-4cab-a59c-9c217753a749']"
+lelang_minggu_motor="xpath://div[contains(text(),'Motor')]"
+icon_selengkapnya_lelang="xpath://button[contains(@aria-label,'next-lelang')]"
+icon_selengkapnya_unit="xpath://button[@aria-label='next-unit']"
+lelang_minggu_ini="xpath://span[contains(text(),'Lelang Minggu ini!')]"
+unit_rekomendasi="xpath://span[contains(text(),'Unit Lelang Rekomendasi JBA')]"
+

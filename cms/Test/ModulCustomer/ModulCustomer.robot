@@ -82,7 +82,7 @@ Verify Successful View Detail Data Customer
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul Customer
-    View Data
+    View Data Customer
     Click Button Kembali
     Close Browser
 Verify Berhasil Mengaktifkan Status
@@ -105,7 +105,7 @@ Verify Berhasil Menonaktifkan Status dari View
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
-    View Data
+    View Data Customer
     Switch Status
     Nonaktifkan Status
     Close Browser
@@ -118,7 +118,7 @@ Verify Berhasil Mengaktifkan Status dari View
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
-    View Data
+    View Data Customer
     Switch Status
     Aktifkan Status
     Close Browser
@@ -164,8 +164,53 @@ Verify Successful Delete Group dari View Detail
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul Customer
+    View Data Customer
     Delete dari View Detail
     Click Ya Hapus dari View
     Verify Berhasil Delete
+    Close Browser
+Verify Successful Export Customer CSV
+    [documentation]  This test case verifies that user is able to export customer csv
+    [tags]  export
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Export Customer CSV
+    Verify Text Not Present Test
+    Close Browser
+Verify Successful Export Customer PDF
+    [documentation]  This test case verifies that user is able to export customer pdf
+    [tags]  export
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Export Customer PDF
+    Verify Text Not Present Test
+    Close Browser
+Verify Successful Export Customer Excel
+    [documentation]  This test case verifies that user is able to export customer excel
+    [tags]  export
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Export Customer Excel
+    Verify Text Not Present Test
+    Close Browser
+Verify Download format template CSV
+    [documentation]  This test case verifies that user is able to Download format template CSV
+    [tags]  download
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    Download format template CSV
+    Close Browser
+Verify Resend Password Customer
+    [documentation]  This test case verifies that user is able to resend password customer
+    [tags]  download
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul Customer
+    View Data Customer
+    Resend Password Customer
     Close Browser
 *** Keywords ***

@@ -3,6 +3,9 @@ Library  SeleniumLibrary
 Variables  ../Locators/LocatorGlobal.py
 Variables  ../TestData/TestdataGlobal.py
 
+*** Variables ***
+${DOWNLOAD_TIMEOUT}  10s
+
 *** Keywords ***
 Click Button Simpan
     Capture Page Screenshot
