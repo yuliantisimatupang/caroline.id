@@ -135,6 +135,7 @@ Lelang Minggu Ini / Mobil
     Capture Page Screenshot
     Execute JavaScript    window.scrollTo(document.body.scrollWidth, 0)
     Sleep  3s
+    Wait Until Element Is Visible  ${icon_mobil_lelang_minggu}  timeout=10s
     Capture Page Screenshot
     Wait Until Element Is Visible  ${icon_selengkapnya_lelang}  timeout=10s
     Click Element     ${icon_selengkapnya_lelang}
@@ -148,6 +149,7 @@ Lelang Minggu Ini / Motor
     Capture Page Screenshot
     Execute JavaScript    window.scrollTo(document.body.scrollWidth, 0)
     Sleep  3s
+    Wait Until Element Is Visible  ${icon_mobil_lelang_minggu}  timeout=10s
     Capture Page Screenshot
     Wait Until Element Is Visible  ${icon_selengkapnya_lelang}  timeout=10s
     Click Element     ${icon_selengkapnya_lelang}
@@ -159,8 +161,22 @@ Unit Rekomendasi
     Capture Page Screenshot
     Execute JavaScript    window.scrollTo(document.body.scrollWidth, 0)
     Sleep  3s
+    Wait Until Element Is Enabled  ${verify_unit_rekom}  timeout=10s
     Capture Page Screenshot
     Wait Until Element Is Visible  ${icon_selengkapnya_unit}  timeout=10s
     Click Element     ${icon_selengkapnya_unit}
+    Sleep  3s
+    Capture Page Screenshot
+Info Penting Lelang
+    Scroll Element Into View  ${info_penting}
+    Wait Until Element Is Enabled  ${info_penting}  timeout=10s
+    Sleep  3s
+    Capture Page Screenshot
+    Scroll Element Into View  ${tata_cara_lelang}
+    Wait Until Element Is Enabled  ${tata_cara_lelang}  timeout=10s
+    Sleep  3s
+    Capture Page Screenshot
+    Scroll Element Into View  ${syarat_ketentuan}
+    Wait Until Element Is Enabled  ${syarat_ketentuan}  timeout=10s
     Sleep  3s
     Capture Page Screenshot

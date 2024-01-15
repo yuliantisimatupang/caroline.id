@@ -201,4 +201,11 @@ Verify Successful Show Unit Rekomendasi
     Maximize Browser Window
     Unit Rekomendasi
     Close Browser
+Verify Successful Show Info Penting
+    [documentation]  This test case verifies Successful Show Info Penting
+    [tags]  show
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Info Penting Lelang
+    Close Browser
 *** Keywords ***
