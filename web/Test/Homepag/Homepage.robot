@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  Homepage Web JBA
 Library  SeleniumLibrary
-Resource  ../../Resources/GlobalResources.robot
+Resource  ../../Resources/GlobalResourcesWeb.robot
 Resource  ../../Resources/HomepageResources.robot
 
 *** Test Cases ***

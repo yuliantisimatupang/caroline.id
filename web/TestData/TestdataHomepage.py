@@ -7,7 +7,7 @@ AUDI="xpath://span[normalize-space()='AUDI']"
 BEIJING="xpath://span[normalize-space()='BEIJING']"
 BIMANTARA="xpath://span[normalize-space()='BIMANTARA']"
 checkbox_semua="xpath://span[normalize-space()='Semua Model']"
-lokasi="Jakarta"
+lokasi="Bandung"
 tanggal_28="xpath://div[(text()='28')]"
 tanggal_29="xpath://div[(text()='29')]"
 dari_harga= 0

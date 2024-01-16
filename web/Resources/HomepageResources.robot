@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 Library    String
 Library    XML
-Variables  ../Locators/LocatorGlobal.py
+Variables  ../Locators/LocatorGlobalWeb.py
 Variables  ../Locators/LocatorHomepage.py
 Variables  ../TestData/TestdataHomepage.py
 
@@ -124,6 +124,7 @@ Cari Lokasi by Search
     Input Text  ${input_cari_lokasi}  ${lokasi}
     Capture Page Screenshot
     Click Element  ${checkbox_lokasi}
+    Click Element  ${input_cari_lokasi}
     Capture Page Screenshot
 Switch ke Lelang Motor
     Wait Until Element Is Visible  ${lelang_motor}  timeout=10s
