@@ -135,8 +135,6 @@ Click Button Kembali
     Click Element  ${button_kembali}
     Capture Page Screenshot
 Delete dari View Detail
-    Click Element  ${button_view}
-    Capture Page Screenshot
     Wait Until Element Is Visible  ${delete_dari_view}  timeout=10s
     Click Element  ${delete_dari_view}
     Capture Page Screenshot

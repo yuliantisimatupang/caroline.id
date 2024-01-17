@@ -1,50 +1,23 @@
-*** Settings ***
-Documentation  modul customer
+* Settings *
+Documentation  modul mou
 Library  SeleniumLibrary
 Resource  ../../Resources/GlobalResources.robot
-Resource  ../../Resources/modulCustomerResources.robot
+Resource  ../../Resources/modulMOUResources.robot
 
 *** Test Cases ***
-Verify Successful Menampilkan list data customer
-    [documentation]  This test case verifies that user is able to show list data customer
+Verify Successful Menampilkan list data MOU
+    [documentation]  This test case verifies that user is able to show list data mou
     [tags]  show
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer    
-    Close Browser
-Verify Successful Create Data Customer
-    [documentation]  This test case verifies that user is able to create new customer
-    [tags]  add
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    Click Button Create Customer
-    Input Fields Customer
-    Unggah File Menggunakan JavaScript
-
-    #Click Button Simpan
-    #Click Button Ya Simpan
-    #Verify Berhasil Create
-    #Close Browser
-Verify tidak dapat create Customer dengan blank all field
-    [documentation]  This test case verifies that user tidak dapat create Customer dengan blank all field
-    [tags]  add
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    Click Button Create Customer
-    Click Button Selanjutnya Page 1
-    Click Button Selanjutnya Page 2
-    Click Button Simpan
-    Click Button Ya Simpan
-    Verify Terjadi Kesalahan
+    Click Modul MOU
     Close Browser
 Verify Blank filter
     [documentation]  This test case verifies that user is able to Blank filter 
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     CLick Button Tampilkan
     Close Browser
@@ -53,7 +26,7 @@ Verify Berhasil Filter by All Status
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by All Status
     CLick Button Tampilkan
@@ -63,7 +36,7 @@ Verify Berhasil Filter by Status Aktif
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
@@ -73,7 +46,7 @@ Verify Berhasil Filter by Status Non Aktif
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
@@ -83,7 +56,7 @@ Verify Successful View Detail Data Customer
     [tags]  view
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     View Data Customer
     Close Browser
 Verify Berhasil Mengaktifkan Status
@@ -91,7 +64,7 @@ Verify Berhasil Mengaktifkan Status
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
@@ -102,7 +75,7 @@ Verify Berhasil Menonaktifkan Status dari View
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
@@ -115,7 +88,7 @@ Verify Berhasil Mengaktifkan Status dari View
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
@@ -128,7 +101,7 @@ Verify Berhasil Menonaktifkan Status
     [tags]  filter
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
@@ -139,7 +112,7 @@ Verify Successful Search by Simbol
     [tags]  search
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Search By Simbol
     Close Browser
 Verify Search Blank search
@@ -147,36 +120,16 @@ Verify Search Blank search
     [tags]  search
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
+    Click Modul MOU
     Search Blank search
-    Close Browser
-Verify Successful Delete Data Customer dari list
-    [documentation]  This test case verifies that user is able to delete data customer dari list
-    [tags]  delete
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    Click Button Delete Customer
-    Verify Berhasil Delete
-    Close Browser
-Verify Successful Delete Group dari View Detail 
-    [documentation]  This test case verifies that user is able to delete group dari view detail
-    [tags]  delete
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    View Data Customer
-    Delete dari View Detail
-    Click Ya Hapus dari View
-    Verify Berhasil Delete
     Close Browser
 Verify Successful Export Customer CSV
     [documentation]  This test case verifies that user is able to export customer csv
     [tags]  export
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
-    Export Customer CSV
+    Click Modul MOU
+    Export MOU CSV
     Verify Text Not Present Test
     Close Browser
 Verify Successful Export Customer PDF
@@ -184,8 +137,8 @@ Verify Successful Export Customer PDF
     [tags]  export
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
-    Export Customer PDF
+    Click Modul MOU
+    Export MOU PDF
     Verify Text Not Present Test
     Close Browser
 Verify Successful Export Customer Excel
@@ -193,25 +146,8 @@ Verify Successful Export Customer Excel
     [tags]  export
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Click Modul Customer
-    Export Customer Excel
+    Click Modul MOU
+    Export MOU Excel
     Verify Text Not Present Test
     Close Browser
-Verify Download format template CSV
-    [documentation]  This test case verifies that user is able to Download format template CSV
-    [tags]  download
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    Download format template CSV
-    Close Browser
-Verify Resend Password Customer
-    [documentation]  This test case verifies that user is able to resend password customer
-    [tags]  download
-    Open Browser  ${URL}  ${BROWSER}
-    Maximize Browser Window
-    Click Modul Customer
-    View Data Customer
-    Resend Password Customer
-    Close Browser
-*** Keywords ***
+*** Test Cases ***

@@ -14,7 +14,7 @@ input_nama_kota="xpath://div[@blocker-target='cancel-add-modal']//div//div//div/
 input_alamat="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik Alamat']"
 input_no_ktp="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No KTP']"
 input_no_npwp="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//input[@placeholder='Ketik No NPWP']"
-upload_ktp="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@name='file-uploader-ktp-url']//div[contains(text(),'File Upload')]"
+upload_ktp="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@name='file-uploader-ktp-url']//label//img"
 upload_npwp="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@name='file-uploader-npwp-url']//label//img"
 button_selanjutnya="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//button[@type='button'][normalize-space()='Selanjutnya']"
 button_selanjutnya2="xpath://div[@class='milestone-form']//div[@class='flex mt-auto']//button[@type='button'][normalize-space()='Selanjutnya']"

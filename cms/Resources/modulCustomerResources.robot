@@ -2,9 +2,15 @@
 Library  SeleniumLibrary
 Library    DateTime
 Library    OperatingSystem
+Library  Process
 Variables  ../Locators/LocatorCustomer.py
 Variables  ../Locators/LocatorGlobal.py
 Variables  ../TestData/TestdataCustomer.py
+Variables  ../TestData/TestdataGlobal.py
+
+*** Variables ***
+${image_path}   ${EXECDIR}\\JBA\\cms\\DataFiles\\Test.png
+*** Variables ***
 
 *** Keywords ***
 Click Modul Customer
@@ -13,6 +19,7 @@ Click Modul Customer
 Click Button Create Customer
     Wait Until Element Is Visible  ${button_create}  timeout=10s
     Click Button  ${button_create}
+
 Input Fields Customer
     Input Text   ${input_no_customer_jba}  ${no_customer_jba}
     Click Element  ${input_pilih_tipe_customer}
@@ -33,40 +40,17 @@ Input Fields Customer
     Input Text   ${input_alamat}  ${alamat}
     Input Text   ${input_no_ktp}  ${no_ktp}
     Input Text   ${input_no_npwp}  ${no_npwp}
-    Wait Until Element Is Visible  ${upload_ktp}
-    #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
-    #Click Element  ${upload_ktp}
-    #${file_contents}=    Run Keyword And Ignore Error    Get File    ${EXECDIR}/cms/Test/ModulCustomer/Test.png    encoding=UTF-8
-    #Run Keyword Unless    '${file_contents}' == 'None'    Log    Successfully read file contents: ${file_contents}
-    #${file_path}    Get File    ${IMAGE_PATH}  
-    #Click Element  ${upload_ktp}
-    Choose File  ${upload_ktp}  ${EXECDIR}\cms\Test\ModulCustomer\Test.png
-    #Choose File  ${upload_npwp}  ${file_npwp}
-    Capture Page Screenshot
-    Scroll Element Into View  ${button_selanjutnya}
-    Click Element  ${button_selanjutnya}
-    Input Text   ${input_nama_bank}  ${nama_bank}
-    Input Text   ${input_cabang_bank}  ${cabang_bank}
-    Input Text   ${input_no_rekening}  ${no_rekening}
-    #Choose File  ${upload_foto_buku_tabungan}  ${file_tabungan}
-    Input Text  ${input_catatan}  ${Catatan}
-    Capture Page Screenshot
-    Wait Until Element Is Enabled  ${button_selanjutnya}  timeout=10s
-    Click Element  ${button_selanjutnya2}
-    Click Element  ${input_tujuan_beli}
-    Click Element  ${digunakan_sendiri}
-    Click Element  ${input_sumber_dana}
-    Click Element  ${gaji_upah}
-    Input Text  ${input_transaksi_untuk}  ${transaksi_untuk}
-    Click Element  ${input_jenis_kendaraan}
-    Click Element  ${niaga}
-    Input Text  ${input_other1}  ${other}
-    Input Text  ${input_other2}  ${other}
-    Input Text  ${input_other3}  ${other}
-    Input Text  ${input_other4}  ${other}
-    Input Text  ${input_other5}  ${other}
-    Click Element  ${status_on_customer}
-    Capture Page Screenshot
+Unggah File Menggunakan JavaScript
+    Log   ${CURDIR}
+    ${image_path1}    Set Variable   ${CURDIR}\\Test1.png
+    ${image_path2}  Normalize Path   ${image_path1}
+    Scroll Element Into View  ${upload_ktp}
+    Wait Until Element Is Visible    ${upload_ktp}   timeout=10s
+    Set Focus To Element  ${upload_ktp}
+    #Execute JavaScript  document.querySelector('${upload_ktp}').style.display = 'block';  # Membuat tombol unggah terlihat
+    #Execute JavaScript  document.querySelector('${upload_ktp}').click();  # Klik tombol unggah
+    Execute JavaScript  document.querySelector('${upload_ktp}').style.display = 'block';  # Membuat elemen input file terlihat
+    Execute JavaScript  document.querySelector('${upload_ktp}').setAttribute('value', '${image_path2}');  # Set nilai elemen input file
 Click Button Ya Simpan
     Click Button  ${button_ya_simpan}
 Click Button Cek Lagi

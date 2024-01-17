@@ -9,3 +9,4 @@ size_table_20="//div[@class='page-size-option w-full p-3 hover:bg-gray-200 dropd
 size_table_50="//div[@class='page-size-option w-full p-3 hover:bg-gray-200 dropdown-item dropdown-item-page-size-type'][normalize-space()='50']"
 size_table_100="//div[@class='page-size-option w-full p-3 hover:bg-gray-200 dropdown-item dropdown-item-page-size-type'][normalize-space()='100']"
 URL_Page2_cms="https://jba-aaas-cms-dev.aslcode.dev/branches?page=2"
+TEXT_TO_NOT_CONTAIN="Format expor belum didukung."

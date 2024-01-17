@@ -1,5 +1,4 @@
 #TestData Modul Customer
-TEXT_TO_NOT_CONTAIN="Format expor belum didukung."
 no_customer_jba="0101"
 tipe_customer_coorporate="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[@data-value='CORPORATE']"
 tipe_customer_perorang="xpath://div[@blocker-target='cancel-add-modal']//div//div//div//div//div//form//div[@name='content-section-0']//div//div//div//div//div[@data-scope='add-form']//div//div[contains(text(),'Perorangan')]"
