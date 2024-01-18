@@ -24,4 +24,24 @@ Verify Berhasil Daftar Akun
     Click Button Submit Daftar
     Verify Berhasil Daftar Akun
     Close Browser
+Verify Gagal Daftar Akun
+    [documentation]  This test case verifies that user is unable to daftar akun dengan user yang sudah terdaftar
+    [tags]  daftar
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Button Daftar
+    Input Fields Daftar Akun User Tedaftar
+    Click Button Submit Daftar
+    Verify User Sudah Ada
+    Close Browser
+Verify Berhasil Login
+    [documentation]  This test case verifies that user is unable to login
+    [tags]  login
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Button Masuk
+    Input Fields Login
+    Click Button Submit Masuk
+    Verify Berhasil Login
+    Close Browser
 *** Keywords ***
