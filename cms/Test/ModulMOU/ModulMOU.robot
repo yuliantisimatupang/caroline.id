@@ -12,6 +12,16 @@ Verify Successful Menampilkan list data MOU
     Maximize Browser Window
     Click Modul MOU
     Close Browser
+Verify Gagal Create MOU Fields Kosong 
+    [documentation]  This test case verifies that user is unable to create mou semua fields mandatory kosong
+    [tags]  view
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Click Modul MOU
+    Click Button Create Mou
+    Click Button Simpan Mou
+    Verify Field Harus diisi
+    Close Browser
 Verify Blank filter
     [documentation]  This test case verifies that user is able to Blank filter 
     [tags]  filter
@@ -57,7 +67,7 @@ Verify Successful View Detail Data Customer
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
     Click Modul MOU
-    View Data Customer
+    View Data MOU
     Close Browser
 Verify Berhasil Mengaktifkan Status
     [documentation]  This test case verifies that user is able to Activate Status
@@ -79,7 +89,7 @@ Verify Berhasil Menonaktifkan Status dari View
     Click Button filter
     Filter by Status Aktif
     CLick Button Tampilkan
-    View Data Customer
+    View Data MOU
     Switch Status
     Nonaktifkan Status
     Close Browser
@@ -92,7 +102,7 @@ Verify Berhasil Mengaktifkan Status dari View
     Click Button filter
     Filter by Status Non Aktif
     CLick Button Tampilkan
-    View Data Customer
+    View Data MOU
     Switch Status
     Aktifkan Status
     Close Browser

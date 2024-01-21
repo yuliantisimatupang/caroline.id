@@ -5,3 +5,7 @@ icon_export="xpath://button[@class='btn-grey modal-button p-3 rounded-full']//*[
 pilih_format_mou="xpath://div[@data-value='form-format']//div[@class='absolute left-0 top-0 h-12 max-h-[48px] w-full searchable-cover form-input-ex']"
 button_export="xpath://button[normalize-space()='Ekspor']"
 button_view_mou="xpath://tbody/tr[1]/td[8]/div[1]/button[1]//*[name()='svg']"
+create_mou="xpath://button[@class='btn-active py-3 px-4 rounded-3xl flex items-center justify-center text-xs modal-button create-button']"
+simpan_mou="xpath://button[@class='submit-form h-12 w-24 btn-active ml-auto p-3 rounded-full flex items-center justify-center text-xs'][normalize-space()='Simpan']"
+input_no_seller="xpath://div[@data-scope='add-form']//div[@data-value='form-seller-id']//div"
+input_tanggal_mulai_mou="xpath://div[@id='add-form-modal']//input[contains(@name,'mouStart')]"

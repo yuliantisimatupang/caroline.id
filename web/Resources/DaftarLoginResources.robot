@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 Library    String
 Library    XML
+Library    random
 Variables  ../Locators/LocatorGlobalWeb.py
 Variables  ../Locators/LocatorDaftarLogin.py
 Variables  ../TestData/TestdataDaftarLogin.py
@@ -21,16 +22,14 @@ Click Button Submit Daftar
     Click Element     ${button_submit_daftar}
     Capture Page Screenshot
 Input Fields Daftar Akun
-    FOR    ${index}    IN RANGE    3       
-         ${random_text}    Generate Random String    7
-        Log    Iteration ${index + 1}: Generated Random Text: ${random_text}
-        
-    END
+    ${random_text}      Generate Random String    ${max_length}
     Wait Until Element Is Visible  ${input_nama_depan}  timeout=10s
-    Input Text  ${input_nama_depan}  ${random_text}${input_nama_depan}
-    Input Text  ${input_nama_belakang}  ${random_text}${input_nama_belakang}
-    Input Text  ${input_no_hp}  ${no_hp}${max_length}
-    Input Text  ${input_email}  ${random_text}${input_email}
+    Input Text  ${input_nama_depan}  ${random_text}${nama_depan}
+    Input Text  ${input_nama_belakang}  ${random_text}${nama_belakang}
+    ${random_number}=    Evaluate    random.randint(1, 9)
+    Log    Generated Random Number: ${random_number}
+    Input Text  ${input_no_hp}  ${no_hp}${random_number}
+    Input Text  ${input_email}  ${random_text}${email}${domain}
     Input Text  ${input_password}  ${password}
     Input Text  ${input_konfir_password}  ${password}
     Click Element  ${checkbox_agree}
@@ -48,6 +47,27 @@ Input Fields Daftar Akun User Tedaftar
     Click Element  ${checkbox_agree}
     Capture Page Screenshot
     Sleep  20s
+Input Fields Email Tidak Valid
+    ${random_text}      Generate Random String    ${max_length}
+    Wait Until Element Is Visible  ${input_nama_depan}  timeout=10s
+    Input Text  ${input_nama_depan}  ${random_text}${nama_depan}
+    Input Text  ${input_nama_belakang}  ${random_text}${nama_belakang}
+    ${random_number}=    Evaluate    random.randint(1, 9)
+    Log    Generated Random Number: ${random_number}
+    Input Text  ${input_no_hp}  ${no_hp}${random_number}
+    Input Text  ${input_email}  ${random_text}${email}
+    Capture Page Screenshot
+Input Fields Password Tidak Valid
+    ${random_text}      Generate Random String    ${max_length}
+    Wait Until Element Is Visible  ${input_nama_depan}  timeout=10s
+    Input Text  ${input_nama_depan}  ${random_text}${nama_depan}
+    Input Text  ${input_nama_belakang}  ${random_text}${nama_belakang}
+    ${random_number}=    Evaluate    random.randint(1, 9)
+    Log    Generated Random Number: ${random_number}
+    Input Text  ${input_no_hp}  ${no_hp}${random_number}
+    Input Text  ${input_email}  ${random_text}${email}${domain}
+    Input Text  ${input_password}  ${password_invalid}
+    Capture Page Screenshot
 Verify Berhasil Daftar Akun
     Sleep  3s
     Wait Until Element Contains    ${text_berhasil_daftar}   Cek Email Anda
@@ -77,3 +97,38 @@ Verify Berhasil Login
     Sleep  3s
     Wait Until Element Contains  ${verify_selamat_datang}  Selamat Datang
     Capture Page Screenshot
+Verify Field Wajib diisi Daftar Akun
+    Sleep  3s
+    Wait Until Element Contains    ${text_wajib_diisi}    Wajib diisi
+    Capture Page Screenshot
+Verify Field Wajib diisi Login
+    Sleep  3s
+    Wait Until Element Is Enabled  ${verify_wajib_isi}  timeout=5s
+    Capture Page Screenshot
+Verify Email Tidak Valid
+    Sleep  3s
+    Wait Until Element Is Enabled  ${verify_email_invalid}  timeout=5s
+    Capture Page Screenshot
+Verify Password Tidak Valid
+    Sleep  3s
+    Wait Until Element Is Enabled  ${veirfy_password_invalid}  timeout=5s
+    Capture Page Screenshot
+Lupa Password
+    Wait Until Element Is Visible  ${lupa_password}  timeout=5s
+    Capture Page Screenshot
+    Click Element  ${lupa_password}
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${input_email_nohp}  timeout=5s
+    Input Text  ${input_email_nohp}  ${email1}
+    Sleep  20s
+    Capture Page Screenshot
+    Scroll Element Into View  ${button_reset}
+    Click Element  ${button_reset}
+    Wait Until Element Is Visible  ${ya_mengerti_daftar}  timeout=5s
+    Capture Page Screenshot
+    Click Element  ${ya_mengerti_daftar}
+    Capture Page Screenshot
+
+
+
+

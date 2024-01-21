@@ -17,3 +17,15 @@ input_email_login="xpath://input[@placeholder='Email']"
 input_password_login="xpath://input[@placeholder='Password']"
 button_masuk="xpath://button[@type='submit'][normalize-space()='Masuk']"
 verify_selamat_datang="xpath://span[normalize-space()='Selamat Datang']"
+verify_wajib_isi="xpath:(//p[@class='text-left text-red text-xs min-h-[16px]'][normalize-space()='Wajib Diisi'])"
+verify_email_invalid="xpath://p[normalize-space()='Email tidak valid']"
+veirfy_password_invalid="xpath://p[normalize-space()='Wajib 8 Karakter terdiri Huruf + Angka + Symbol']"
+
+#Lupa Password
+lupa_password="xpath://button[normalize-space()='Lupa Password']"
+input_email_nohp="xpath://input[@placeholder='Email / No Ponsel']"
+button_reset="xpath://button[normalize-space()='Reset']"
+
+#profile
+button_profile="xpath://div[@class='hover:bg-secondary rounded-full w-10 h-10 flex items-center justify-center relative bg-primary text-white font-bold']"
+

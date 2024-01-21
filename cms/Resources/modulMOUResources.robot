@@ -54,8 +54,18 @@ Verify Text Not Present Test
     Run Keyword Unless    ${text_found}    Log    Text '${TEXT_TO_NOT_CONTAIN}' is not present on the page
     Run Keyword If    ${text_found}    Fail    Text '${TEXT_TO_NOT_CONTAIN}' is present on the page
     Close Browser
-View Data Customer
+View Data MOU
     Click Element  ${button_view_mou}
+    Capture Page Screenshot
+Click Button Create Mou
+    Wait Until Element Is Visible  ${create_mou}  timeout=10s
+    Click Element   ${create_mou}
+    Capture Page Screenshot
+Click Button Simpan Mou
+    Wait Until Element Is Visible  ${simpan_mou}  timeout=10s
+    Click Element   ${simpan_mou}
+    Scroll Element Into View  ${input_tanggal_mulai_mou}
+    Sleep  3s
     Capture Page Screenshot
 
 *** Keywords ***
