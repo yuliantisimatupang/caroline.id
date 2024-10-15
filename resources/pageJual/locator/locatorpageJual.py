@@ -1,0 +1,50 @@
+#jualstepsatu
+button_jual = "xpath://a[contains(text(),'Jual Mobil')]"
+pilih="xpath://button[normalize-space()='Jual Sekarang']"
+select_merek="xpath://span[normalize-space()='DAIHATSU']"
+select_model="xpath://span[normalize-space()='SIGRA']"
+select_varian="xpath://span[normalize-space()='D 1.0']"
+select_tahun="xpath://span[normalize-space()='2021']"
+select_transmisi="xpath://span[normalize-space()='Manual']"
+select_kilometer="xpath://span[normalize-space()='0 - 10.000 KM']"
+select_color="xpath://span[normalize-space()='Merah']"
+select_tanggal_stnk="xpath://input[@type='date']"
+input_ekspteasi_jual="xpath://div[text()='Ekspektasi Harga Jual']/../../div/following-sibling::input"
+button_lanjutkan="xpath://button[normalize-space()='Lanjutkan Inspeksi']"
+
+#jualstepkedua inspeksi cabang
+input_nama="xpath://input[@type='text']"
+input_nomor="xpath://input[@type='number']"
+input_email="xpath://input[@type='email']"
+inpeksi="xpath://input[@type='radio' and @name='radio-10']"
+dropdown_cabang="xpath://div[text()='Cabang']/../following-sibling::button"
+select_cabang="xpath://span[@class='flex justify-between truncate font-normal' and contains(text(), 'Pondok Pinang')]"
+# select_date="xpath://div[contains(@class,'mt-1 h-fit')]//div[contains(@class,'relative mt-1 h-]"
+# input_element="xpath://input[@type='date']"
+input_date="xpath://input[@type='date']"
+dropdown_jam="xpath://div[text()='Jam Inspeksi']/../following-sibling::button"
+select_jam="xpath://span[normalize-space()='09.00 - 12.00 WIB']"
+button_submit="xpath://button[@id='form-jual-btn-submit']"
+
+#jualstepkedua inspeksi rumah
+inspeksi_rumah="xpath://input[@type='radio' and @name='radio-11']"
+dropdown_provinsi="xpath://div[text()='Provinsi']/../following-sibling::button"
+select_provinsi="xpath://span[@class='flex justify-between truncate font-normal' and contains(text(), 'Dki Jakarta')]"
+dropdown_kota="xpath://div[text()='Kota']/../following-sibling::button"
+select_kota="xpath://span[@class='flex justify-between truncate font-normal' and contains(text(), 'Kota Jakarta')]"
+input_alamat="xpath://div[text()='Alamat Lengkap']/../../div/following-sibling::input"
+
+#jualsteppertama
+BMW="xpath.//span[normalize-space()='BMW']"
+input_tahun="2021"
+input_transmisi="manual"
+date="9/13/2024"
+harga="120000000"
+
+#jualstepkedua
+nama="inpeksicabangautomation"
+nama2="inpeksirumahautomation"
+nomor="87818660928"
+email="automation@mail.com"
+jam="xpath.//span[normalize-space()='09.00 - 12.00 WIB']"
+alamat="Jl. Raya Sultan Agung KM 28 No. 32 Medan Satria, Kota Bekasi, Jawa Barat"

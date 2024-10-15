@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.6 on darwin)" generated="2024-10-13T12:17:20.207868" rpa="false" schemaversion="5">
+<suite id="s1" name="Homepage scenarios" source="/Users/yuliantisimatupang/Downloads/caroline/web/Test/Homepage/Homepage_scenarios.robot">
+<test id="s1-t1" name="Verify Successful Menampilkan Suggestion Merek dan Model" line="17">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:20.296195" level="INFO">Opening browser 'Chrome' to base url 'https://caroline-user-staging.aslcode.dev/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-13T12:17:20.296077" elapsed="1.973479"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-13T12:17:22.272564" elapsed="6.772774"/>
+</kw>
+<kw name="Click Button Beli" owner="HomepageResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${beli}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.046712" elapsed="0.015876"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:29.063087" level="INFO">Clicking element 'xpath://h3[normalize-space()='Beli Mobil']'.</msg>
+<arg>${beli}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.062871" elapsed="0.031245"/>
+</kw>
+<status status="PASS" start="2024-10-13T12:17:29.046203" elapsed="0.048018"/>
+</kw>
+<kw name="Pilih merek dan model" owner="HomepageResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${pilih_merek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.094709" elapsed="0.015827"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:29.110759" level="INFO">Clicking element 'xpath://span[normalize-space()='Pilih Merek dan Model']'.</msg>
+<arg>${pilih_merek}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.110644" elapsed="0.021341"/>
+</kw>
+<status status="PASS" start="2024-10-13T12:17:29.094520" elapsed="0.037532"/>
+</kw>
+<kw name="Cari Merek dan Model" owner="HomepageResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${input_cari_merek_model}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.132328" elapsed="0.845200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:29.977922" level="INFO">Clicking element 'xpath://input[contains(@placeholder,'Cari mudah disini')]'.</msg>
+<arg>${input_cari_merek_model}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:17:29.977752" elapsed="0.033877"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:30.011857" level="INFO">Typing text 'honda' into text field 'xpath://input[contains(@placeholder,'Cari mudah disini')]'.</msg>
+<arg>${input_cari_merek_model}</arg>
+<arg>${search_merek}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:17:30.011730" elapsed="0.095821"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:17:33.108844" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:17:30.107664" elapsed="3.001325"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:17:33.109560" level="INFO">Clicking element 'xpath://h4[text()="Pilih Merek &amp; Model"]/../../following-sibling::div/div[2]/div/div/label[6]'.</msg>
+<msg time="2024-10-13T12:17:33.466032" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-13T12:17:33.466158" level="FAIL">Element with locator 'xpath://h4[text()="Pilih Merek &amp; Model"]/../../following-sibling::div/div[2]/div/div/label[6]' not found.</msg>
+<arg>${pilih_model}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-10-13T12:17:33.109249" elapsed="0.359365">Element with locator 'xpath://h4[text()="Pilih Merek &amp; Model"]/../../following-sibling::div/div[2]/div/div/label[6]' not found.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${button_simpanMerkModel}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-13T12:17:33.468726" elapsed="0.000017"/>
+</kw>
+<status status="FAIL" start="2024-10-13T12:17:29.132191" elapsed="4.336622">Element with locator 'xpath://h4[text()="Pilih Merek &amp; Model"]/../../following-sibling::div/div[2]/div/div/label[6]' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-10-13T12:17:33.468902" elapsed="0.000012"/>
+</kw>
+<doc>This test case verifies that user is able to cari merek &amp; model</doc>
+<tag>search</tag>
+<status status="FAIL" start="2024-10-13T12:17:20.295583" elapsed="13.173437">Element with locator 'xpath://h4[text()="Pilih Merek &amp; Model"]/../../following-sibling::div/div[2]/div/div/label[6]' not found.</status>
+</test>
+<doc>Homepage</doc>
+<status status="FAIL" start="2024-10-13T12:17:20.208362" elapsed="13.260916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">search</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Homepage scenarios">Homepage scenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
